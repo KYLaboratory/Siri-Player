@@ -28,6 +28,7 @@ class ViewController: UIViewController, MPMediaPickerControllerDelegate, SimpleP
 
     @IBOutlet weak var messageLabel: UILabel!
     @IBOutlet weak var playAndPauseBtn: UIButton!
+    
     @IBAction func start(sender: AnyObject) {
         let songQuery = MPMediaQuery.songsQuery()
         if let all_song = songQuery.items as [MPMediaItem]! {
@@ -51,17 +52,16 @@ class ViewController: UIViewController, MPMediaPickerControllerDelegate, SimpleP
                         single_list.append(single)
                     }
                 }
-                
                 // 曲選定と尻（pass_char）の格納
                 if single_list.count < 1 {
                     pass_char = "NO MUSIC"
-                } else {
+                }
+                else {
                     let select_next = Int(arc4random_uniform(UInt32(single_list.count)))
                     playlist.append(single_list[select_next])
                     pass_char = lastChar(single_list[select_next].title!)
                 }
             }
-            
             // 確認用（コンソールにプレイリストを出力）
             for single in (playlist as [MPMediaItem]!) {
                 let title = single.title ?? "no title"
@@ -73,14 +73,14 @@ class ViewController: UIViewController, MPMediaPickerControllerDelegate, SimpleP
             // プレイリストの登録
             player.pickItems(playlist)
         }
-        
     }
 
     // しりとりできる文字かどうかの判定をする関数
     func checkChar(cha: String) -> String {
         if let che = transList[cha] {
             return che
-        } else {
+        }
+        else {
             return cha
         }
     }
@@ -106,7 +106,6 @@ class ViewController: UIViewController, MPMediaPickerControllerDelegate, SimpleP
             let listViewController:ListViewController = segue.destinationViewController as! ListViewController
             listViewController.receive_param = PLAYLIST_KIND.SIRITORI
         }
-        
     }
     
     override func viewDidLoad() {
@@ -133,7 +132,6 @@ class ViewController: UIViewController, MPMediaPickerControllerDelegate, SimpleP
 
     // メディアアイテムピッカーでアイテムを選択完了したときに呼び出される
     func mediaPicker(mediaPicker: MPMediaPickerController, didPickMediaItems mediaItemCollection: MPMediaItemCollection) {
-        
         // このfunctionを抜けるときにピッカーを閉じる
         defer {
             // ピッカーを閉じ、破棄する
@@ -143,8 +141,6 @@ class ViewController: UIViewController, MPMediaPickerControllerDelegate, SimpleP
         player.pickItems(mediaItemCollection.items)
     }
     
-    
-    
     // 選択がキャンセルされた場合に呼ばれる
     func mediaPickerDidCancel(mediaPicker: MPMediaPickerController) {
         // ピッカーを閉じ、破棄する
@@ -152,13 +148,11 @@ class ViewController: UIViewController, MPMediaPickerControllerDelegate, SimpleP
     }
     
     @IBAction func pushPlayAndPauseBtn(sender: UIButton) {
-        // 再生中に押された場合はpause、再生中でない場合はplay
         if player.nowPlaying {
             pushPause()
         } else {
             pushPlay()
         }
-        
     }
     
     func pushPlay() {
