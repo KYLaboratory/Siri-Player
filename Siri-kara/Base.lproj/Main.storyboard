@@ -23,7 +23,8 @@
                                 </connections>
                             </pickerView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g6j-sf-Cmi">
-                                <rect key="frame" x="138" y="478" width="44" height="30"/>
+                                <rect key="frame" x="110" y="478" width="100" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
                                 <state key="normal" title="Select"/>
                                 <connections>
                                     <segue destination="r52-sr-Cbt" kind="show" id="eBr-jw-tY3"/>
@@ -39,7 +40,7 @@
             </objects>
             <point key="canvasLocation" x="727" y="387"/>
         </scene>
-        <!--Item-->
+        <!--Play-->
         <scene sceneID="5Jf-ie-uLv">
             <objects>
                 <viewController id="6b6-yv-7Nv" sceneMemberID="viewController">
@@ -52,14 +53,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="syU-Pf-8rP"/>
+                    <tabBarItem key="tabBarItem" title="Play" id="syU-Pf-8rP"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aOy-1c-LlV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1823" y="58"/>
         </scene>
-        <!--Item-->
+        <!--List-->
         <scene sceneID="VQm-JW-x7W">
             <objects>
                 <viewController id="gsj-I1-CaD" sceneMemberID="viewController">
@@ -72,7 +73,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="n2K-xT-L3I"/>
+                    <tabBarItem key="tabBarItem" title="List" id="n2K-xT-L3I"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FxJ-JV-xq2" userLabel="First Responder" sceneMemberID="firstResponder"/>
