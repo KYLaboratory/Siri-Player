@@ -14,6 +14,8 @@
 		35FEEAF61BC810110090EA67 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35FEEAF41BC810110090EA67 /* LaunchScreen.storyboard */; };
 		35FEEB011BC810110090EA67 /* Siri_karaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35FEEB001BC810110090EA67 /* Siri_karaTests.swift */; };
 		35FEEB0C1BC810110090EA67 /* Siri_karaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35FEEB0B1BC810110090EA67 /* Siri_karaUITests.swift */; };
+		4F8AF56F1BC8B59A004B3004 /* PlayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F8AF56E1BC8B59A004B3004 /* PlayViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		4F8AF5711BC8B655004B3004 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F8AF5701BC8B655004B3004 /* ListViewController.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +49,8 @@
 		35FEEB071BC810110090EA67 /* Siri-karaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Siri-karaUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		35FEEB0B1BC810110090EA67 /* Siri_karaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Siri_karaUITests.swift; sourceTree = "<group>"; };
 		35FEEB0D1BC810110090EA67 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4F8AF56E1BC8B59A004B3004 /* PlayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayViewController.swift; sourceTree = "<group>"; };
+		4F8AF5701BC8B655004B3004 /* ListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +104,8 @@
 				35FEEAEB1BC810110090EA67 /* AppDelegate.swift */,
 				35FEEAED1BC810110090EA67 /* ViewController.swift */,
 				35FEEAEF1BC810110090EA67 /* Main.storyboard */,
+				4F8AF56E1BC8B59A004B3004 /* PlayViewController.swift */,
+				4F8AF5701BC8B655004B3004 /* ListViewController.swift */,
 				35FEEAF21BC810110090EA67 /* Assets.xcassets */,
 				35FEEAF41BC810110090EA67 /* LaunchScreen.storyboard */,
 				35FEEAF71BC810110090EA67 /* Info.plist */,
@@ -256,6 +262,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				35FEEAEE1BC810110090EA67 /* ViewController.swift in Sources */,
+				4F8AF56F1BC8B59A004B3004 /* PlayViewController.swift in Sources */,
+				4F8AF5711BC8B655004B3004 /* ListViewController.swift in Sources */,
 				35FEEAEC1BC810110090EA67 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -483,6 +491,7 @@
 				35FEEB121BC810110090EA67 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		35FEEB131BC810110090EA67 /* Build configuration list for PBXNativeTarget "Siri-karaTests" */ = {
 			isa = XCConfigurationList;
@@ -491,6 +500,7 @@
 				35FEEB151BC810110090EA67 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		35FEEB161BC810110090EA67 /* Build configuration list for PBXNativeTarget "Siri-karaUITests" */ = {
 			isa = XCConfigurationList;
@@ -499,6 +509,7 @@
 				35FEEB181BC810110090EA67 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

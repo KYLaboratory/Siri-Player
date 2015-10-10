@@ -43,7 +43,7 @@
         <!--Play-->
         <scene sceneID="5Jf-ie-uLv">
             <objects>
-                <viewController id="6b6-yv-7Nv" sceneMemberID="viewController">
+                <viewController id="6b6-yv-7Nv" customClass="PlayViewController" customModule="Siri_kara" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="fDs-BY-Zbu"/>
                         <viewControllerLayoutGuide type="bottom" id="Ei1-Nc-RhG"/>
@@ -63,7 +63,7 @@
         <!--List-->
         <scene sceneID="VQm-JW-x7W">
             <objects>
-                <viewController id="gsj-I1-CaD" sceneMemberID="viewController">
+                <viewController id="gsj-I1-CaD" customClass="ListViewController" customModule="Siri_kara" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="g1Y-i6-d4E"/>
                         <viewControllerLayoutGuide type="bottom" id="CQE-lx-5Kw"/>
