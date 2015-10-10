@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Siri-kara/ViewController.swift"
-            timestampString = "466174376.119172"
+            timestampString = "466183103.817046"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "45"
-            endingLineNumber = "45"
+            startingLineNumber = "125"
+            endingLineNumber = "125"
             landmarkName = "ViewController"
             landmarkType = "3">
          </BreakpointContent>
@@ -26,11 +26,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Siri-kara/ViewController.swift"
-            timestampString = "466174376.119172"
+            timestampString = "466183103.817046"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "26"
-            endingLineNumber = "26"
+            startingLineNumber = "105"
+            endingLineNumber = "105"
             landmarkName = "prepareForSegue(_:sender:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -81,6 +81,132 @@
             endingLineNumber = "20"
             landmarkName = "viewDidLoad()"
             landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Siri-kara/ViewController.swift"
+            timestampString = "466183103.817046"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "27"
+            endingLineNumber = "27"
+            landmarkName = "ViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Siri_kara.ViewController.player.getter : Siri_kara.SimplePlayer"
+                  moduleName = "Siri-kara"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Yohei_Katoh/Siri-kara/Siri-kara/ViewController.swift"
+                  timestampString = "466180522.637753"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "24">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Siri_kara.ViewController.init (Siri_kara.ViewController.Type)(nibName : Swift.Optional&lt;Swift.String&gt;, bundle : Swift.Optional&lt;ObjectiveC.NSBundle&gt;) -&gt; Siri_kara.ViewController"
+                  moduleName = "Siri-kara"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Yohei_Katoh/Siri-kara/Siri-kara/ViewController.swift"
+                  timestampString = "466180522.638006"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "25"
+                  endingLineNumber = "25"
+                  offsetFromSymbolStart = "352">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Siri_kara.ViewController.init (Siri_kara.ViewController.Type)(coder : ObjectiveC.NSCoder) -&gt; Swift.Optional&lt;Siri_kara.ViewController&gt;"
+                  moduleName = "Siri-kara"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Yohei_Katoh/Siri-kara/Siri-kara/ViewController.swift"
+                  timestampString = "466180522.638229"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "25"
+                  endingLineNumber = "25"
+                  offsetFromSymbolStart = "288">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Siri-kara/ViewController.swift"
+            timestampString = "466179463.286589"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "22"
+            endingLineNumber = "22"
+            landmarkName = "ViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Siri_kara.ViewController.__deallocating_deinit"
+                  moduleName = "Siri-kara"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Yohei_Katoh/Siri-kara/Siri-kara/ViewController.swift"
+                  timestampString = "466180522.640001"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "16">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Siri_kara.ViewController.init (Siri_kara.ViewController.Type)(nibName : Swift.Optional&lt;Swift.String&gt;, bundle : Swift.Optional&lt;ObjectiveC.NSBundle&gt;) -&gt; Siri_kara.ViewController"
+                  moduleName = "Siri-kara"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Yohei_Katoh/Siri-kara/Siri-kara/ViewController.swift"
+                  timestampString = "466180522.640266"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "24"
+                  endingLineNumber = "24"
+                  offsetFromSymbolStart = "60">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Siri_kara.ViewController.init (Siri_kara.ViewController.Type)(coder : ObjectiveC.NSCoder) -&gt; Swift.Optional&lt;Siri_kara.ViewController&gt;"
+                  moduleName = "Siri-kara"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Yohei_Katoh/Siri-kara/Siri-kara/ViewController.swift"
+                  timestampString = "466180522.640587"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "24"
+                  endingLineNumber = "24"
+                  offsetFromSymbolStart = "20">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

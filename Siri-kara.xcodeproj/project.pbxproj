@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		35CBAC191BC95627007E9184 /* SimplePlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35CBAC181BC95627007E9184 /* SimplePlayer.swift */; settings = {ASSET_TAGS = (); }; };
 		35FEEAEC1BC810110090EA67 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35FEEAEB1BC810110090EA67 /* AppDelegate.swift */; };
 		35FEEAEE1BC810110090EA67 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35FEEAED1BC810110090EA67 /* ViewController.swift */; };
 		35FEEAF11BC810110090EA67 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35FEEAEF1BC810110090EA67 /* Main.storyboard */; };
@@ -35,6 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		35CBAC181BC95627007E9184 /* SimplePlayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimplePlayer.swift; sourceTree = "<group>"; };
 		35FEEAE81BC810110090EA67 /* Siri-kara.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Siri-kara.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		35FEEAEB1BC810110090EA67 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		35FEEAED1BC810110090EA67 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -103,6 +105,7 @@
 				35FEEAED1BC810110090EA67 /* ViewController.swift */,
 				35FEEAEF1BC810110090EA67 /* Main.storyboard */,
 				4F8AF5701BC8B655004B3004 /* ListViewController.swift */,
+				35CBAC181BC95627007E9184 /* SimplePlayer.swift */,
 				35FEEAF21BC810110090EA67 /* Assets.xcassets */,
 				35FEEAF41BC810110090EA67 /* LaunchScreen.storyboard */,
 				35FEEAF71BC810110090EA67 /* Info.plist */,
@@ -258,6 +261,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				35CBAC191BC95627007E9184 /* SimplePlayer.swift in Sources */,
 				35FEEAEE1BC810110090EA67 /* ViewController.swift in Sources */,
 				4F8AF5711BC8B655004B3004 /* ListViewController.swift in Sources */,
 				35FEEAEC1BC810110090EA67 /* AppDelegate.swift in Sources */,
