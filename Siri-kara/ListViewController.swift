@@ -11,10 +11,18 @@ import UIKit
 
 class ListViewController: UIViewController {
     
- 
+    var receive_param:PLAYLIST_KIND = PLAYLIST_KIND.MAX
+    
+    @IBOutlet weak var myLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        if receive_param == PLAYLIST_KIND.SIRITORI{
+            myLabel.text = "SIRITORI"
+        }
+        else{
+            myLabel.text = "NONE"
+        }
     }
     
     override func didReceiveMemoryWarning() {

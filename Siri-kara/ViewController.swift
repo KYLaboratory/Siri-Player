@@ -8,10 +8,26 @@
 
 import UIKit
 
+enum PLAYLIST_KIND{
+    case GENERATION
+    case CATEGORY
+    case SIRITORI
+    case PLAYNUMBER_ASCENDING
+    case PLAYNUMBER_DECENDING
+    case MAX
+}
 
 class ViewController: UIViewController {
 
-    var howToMakePlaylist = ["年代", "ジャンル", "曲名しりとり", "？？？"]
+    var howToMakePlaylist = ["年代", "ジャンル", "曲名しりとり", "再生回数昇順","再生回数降順"]
+
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!){
+        if(segue.identifier == "goListViewsegue"){
+            let listViewController:ListViewController = segue.destinationViewController as! ListViewController
+            listViewController.receive_param = PLAYLIST_KIND.SIRITORI
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
