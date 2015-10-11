@@ -23,9 +23,9 @@
                                 </connections>
                             </pickerView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nJF-A5-Aht">
-                                <rect key="frame" x="207" y="511" width="107" height="57"/>
+                                <rect key="frame" x="0.0" y="64" width="90" height="51"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="28"/>
-                                <state key="normal" title="GoToList"/>
+                                <state key="normal" title="List"/>
                                 <connections>
                                     <segue destination="Yhx-gA-eL6" kind="show" identifier="goListViewsegue" id="B4c-bk-qlf"/>
                                 </connections>
@@ -33,23 +33,39 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TvZ-UM-bAx">
                                 <rect key="frame" x="73" y="442" width="186" height="51"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="28"/>
-                                <state key="normal" title="Start"/>
+                                <state key="normal" title="Set"/>
                                 <connections>
                                     <action selector="start:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tzb-pf-fr6"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="messageLabel" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pSJ-ak-vVa">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Music Info♪" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pSJ-ak-vVa">
                                 <rect key="frame" x="7" y="161" width="307" height="53"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vav-Li-ZiB">
-                                <rect key="frame" x="0.0" y="525" width="174" height="30"/>
+                                <rect key="frame" x="121" y="517" width="91" height="51"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="28"/>
-                                <state key="normal" title="Play/Pause"/>
+                                <state key="normal" title="▷"/>
                                 <connections>
                                     <action selector="pushPlayAndPauseBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ocw-N8-QX2"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6FE-he-nuD">
+                                <rect key="frame" x="61" y="517" width="63" height="50"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                <state key="normal" title="&lt;&lt;"/>
+                                <connections>
+                                    <action selector="pushPrevBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="R9l-4C-5nc"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZMR-Id-aTg">
+                                <rect key="frame" x="211" y="516" width="55" height="51"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                <state key="normal" title="&gt;&gt;"/>
+                                <connections>
+                                    <action selector="pushNextBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VtV-y1-fUc"/>
                                 </connections>
                             </button>
                         </subviews>
