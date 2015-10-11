@@ -10,7 +10,7 @@ import UIKit
 import AVFoundation
 import MediaPlayer
 
-enum PLAYLIST_KIND{
+enum PLAYLIST_KIND : Int{
     case GENERATION
     case CATEGORY
     case SIRITORI
@@ -19,9 +19,11 @@ enum PLAYLIST_KIND{
     case MAX
 }
 
-class ViewController: UIViewController, MPMediaPickerControllerDelegate, SimplePlayerDelegate {
+class ViewController: UIViewController, MPMediaPickerControllerDelegate, SimplePlayerDelegate,UIPickerViewDelegate {
+
 
     var howToMakePlaylist = ["年代", "ジャンル", "曲名しりとり", "再生回数昇順","再生回数降順"]
+    
     let transList = ["ア":"あ", "イ":"い", "ウ":"う", "エ":"え", "オ":"お", "カ":"か", "キ":"き", "ク":"く", "ケ":"け", "コ":"こ", "サ":"さ", "シ":"し", "ス":"す", "セ":"せ", "ソ":"そ", "タ":"た", "チ":"ち", "ツ":"つ", "テ":"て", "ト":"と", "ナ":"な", "ニ":"に", "ヌ":"ぬ", "ネ":"ね", "ノ":"の", "ハ":"は", "ヒ":"ひ", "フ":"ふ", "ヘ":"へ", "ホ":"ほ", "マ":"ま", "ミ":"み", "ム":"む", "メ":"め", "モ":"も", "ヤ":"や", "ユ":"ゆ", "ヨ":"よ", "ラ":"ら", "リ":"り", "ル":"る", "レ":"れ", "ロ":"ろ", "ワ":"わ", "ヲ":"を", "ン":"ん", "ガ":"が", "ギ":"ぎ", "グ":"ぐ", "ゲ":"げ", "ゴ":"ご", "ザ":"ざ", "ジ":"じ", "ズ":"ず", "ゼ":"ぜ", "ゾ":"ぞ", "ダ":"だ", "ヂ":"ぢ", "ヅ":"づ", "デ":"で", "ド":"ど", "バ":"ば", "ビ":"び", "ブ":"ぶ", "ベ":"べ", "ボ":"ぼ", "パ":"ぱ", "ピ":"ぴ", "プ":"ぷ", "ペ":"ぺ", "ポ":"ぽ", "ぁ":"あ", "ぃ":"い", "ぅ":"う", "ぇ":"え", "ぉ":"お", "ゃ":"や", "ゅ":"ゆ", "ょ":"よ", "ァ":"あ", "ィ":"い", "ゥ":"う", "ェ":"え", "ォ":"お", "ャ":"や", "ュ":"ゆ", "ョ":"よ", "a":"A", "b":"B", "c":"C", "d":"D", "e":"E", "f":"F", "g":"G", "h":"H", "I":"I", "j":"J", "k":"K", "l":"L", "m":"M", "n":"N", "o":"O", "p":"P", "q":"Q", "r":"R", "s":"S", "t":"T", "u":"U", "v":"V", "w":"W", "x":"X", "y":"Y", "z":"Z", "、":"", "。":"", "，":"", "．":"", "・":"", "：":"", "；":"", "？":"", "！":"", "゛":"", "゜":"", "´":"", "｀":"", "¨":"", "＾":"", "￣":"", "＿":"", "ヽ":"", "ヾ":"", "ゝ":"", "ゞ":"", "〃":"", "仝":"", "々":"", "〆":"", "〇":"", "ー":"", "―":"", "‐":"", "／":"", "＼":"", "〜":"", "‖":"", "｜":"", "…":"", "‥":"", "‘":"", "’":"", "“":"", "”":"", "（":"", "）":"", "〔":"", "〕":"", "［":"", "］":"", "｛":"", "｝":"", "〈":"", "〉":"", "《":"", "》":"", "「":"", "」":"", "『":"", "』":"", "【":"", "】":"", "＋":"", "−":"", "±":"", "×":"", "÷":"", "＝":"", "≠":"", "＜":"", "＞":"", "≦":"", "≧":"", "∞":"", "∴":"", "♂":"", "♀":"", "°":"", "′":"", "″":"", "℃":"", "￥":"", "＄":"", "¢":"", "£":"", "％":"", "＃":"", "＆":"", "＊":"", "＠":"", "§":"", "☆":"", "★":"", "○":"", "●":"", "◎":"", "◇":"", " ":"", "◆":"", "□":"", "■":"", "△":"", "▲":"", "▽":"", "▼":"", "※":"", "〒":"", "→":"", "←":"", "↑":"", "↓":"", "〓":"", "∈":"", "∋":"", "⊆":"", "⊇":"", "⊂":"", "⊃":"", "∪":"", "∩":"", "∧":"", "∨":"", "¬":"", "⇒":"", "⇔":"", "∀":"", "∃":"", "∠":"", "⊥":"", "⌒":"", "∂":"", "∇":"", "≡":"", "≒":"", "≪":"", "≫":"", "√":"", "∽":"", "∝":"", "∵":"", "∫":"", "∬":"", "Å":"", "‰":"", "♯":"", "♭":"", "♪":"", "†":"", "‡":"", "¶":"", "?":"", "◯":"", "!":"", "#":"", "$":"", "%":"", "&":"", "'":"", "(":"", ")":"", "*":"", "+":"", "":"", "-":"", ".":"", "/":"", ":":"", ";":"", "<":"", "=":"", ">":"", "@":"", "[":"", "]":"", "^":"", "_":"", "`":"", "{":"", "|":"", "}":"", "~":"", "｡":"", "｢":"", "｣":"", "､":"", "･":""]
     
     let player = SimplePlayer()
@@ -29,6 +31,7 @@ class ViewController: UIViewController, MPMediaPickerControllerDelegate, SimpleP
     @IBOutlet weak var messageLabel: UILabel!
     @IBOutlet weak var playAndPauseBtn: UIButton!
     
+    @IBOutlet weak var pickerView: UIPickerView!
     @IBAction func start(sender: AnyObject) {
         let songQuery = MPMediaQuery.songsQuery()
         if let all_song = songQuery.items as [MPMediaItem]! {
@@ -104,7 +107,8 @@ class ViewController: UIViewController, MPMediaPickerControllerDelegate, SimpleP
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!){
         if(segue.identifier == "goListViewsegue"){
             let listViewController:ListViewController = segue.destinationViewController as! ListViewController
-            listViewController.receive_param = PLAYLIST_KIND.SIRITORI
+            let tmp  = pickerView.selectedRowInComponent(0)
+            listViewController.receive_param = PLAYLIST_KIND(rawValue: tmp)!
         }
     }
     
@@ -126,7 +130,7 @@ class ViewController: UIViewController, MPMediaPickerControllerDelegate, SimpleP
         return howToMakePlaylist.count;  // 1列目の選択肢の数
     }
     
-    func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String! {
+    func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         return howToMakePlaylist[row]  // 1列目のrow番目に表示する値
     }
 

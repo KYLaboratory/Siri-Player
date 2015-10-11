@@ -59,6 +59,7 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
                         <outlet property="messageLabel" destination="pSJ-ak-vVa" id="QDA-BU-DYm"/>
+                        <outlet property="pickerView" destination="lhP-t8-wTm" id="hE6-mU-Sg6"/>
                         <outlet property="playAndPauseBtn" destination="Vav-Li-ZiB" id="Wxn-5o-hLf"/>
                     </connections>
                 </viewController>
