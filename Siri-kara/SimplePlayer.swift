@@ -29,6 +29,8 @@ class SimplePlayer: NSObject, AVAudioPlayerDelegate {
         // mediaItemCollection.itemsから入っているMPMediaItemの配列を取得できる
         //let items = mediaItemCollection.items
         if items.count == 0 {
+            delegate?.updateMessage("END")
+            delegate?.updatePlayBtnsTitle("▷")
             return  // itemが一つもなかったので戻る
         }
         mediaItems = items
@@ -114,8 +116,9 @@ class SimplePlayer: NSObject, AVAudioPlayerDelegate {
     }
     
     func nextItem() {
-        // 範囲外になるなら何もせず戻る
         if currentIndex >= mediaItems.count - 1 {
+            currentIndex = mediaItems.count
+            delegate?.updateMessage("END")
             return
         }
         currentIndex++
@@ -123,8 +126,16 @@ class SimplePlayer: NSObject, AVAudioPlayerDelegate {
     }
 
     func prevItem() {
-        // 範囲外になるなら何もせず戻る
         if currentIndex <= 0 {
+            return
+        }
+        else if currentIndex == mediaItems.count{
+            let item = mediaItems[mediaItems.count - 1 ]
+            let song = item.title ?? ""
+            let artist = item.artist ?? ""
+            let text = song + " | " + artist
+            delegate?.updateMessage(text)
+            currentIndex--
             return
         }
         currentIndex--
@@ -132,15 +143,21 @@ class SimplePlayer: NSObject, AVAudioPlayerDelegate {
     }
     
     private func actPlayItem(){
-        updatePlayer()
+        //updatePlayer()
         if nowPlaying{
             if updatePlayer(){
                 play()
+            }
+            else{
+                delegate?.updatePlayBtnsTitle("▷")
             }
         }
         else{
             if updatePlayer(){
                 pause()
+            }
+            else{
+                delegate?.updatePlayBtnsTitle("||")
             }
         }
     }
@@ -161,6 +178,8 @@ class SimplePlayer: NSObject, AVAudioPlayerDelegate {
             currentIndex = 0
             updatePlayer()
             pause()
+            delegate?.updateMessage("END")
+            delegate?.updatePlayBtnsTitle("▷")
             return
         }
         else {
