@@ -66,12 +66,13 @@ class ViewController: UIViewController, MPMediaPickerControllerDelegate, SimpleP
             playlist.append(all_song[select_first])
             var pass_char = lastChar(all_song[select_first].title!)
             
-            while pass_char != "NO MUSIC" && playlist.count < 101 { // プレイリストの上限は100曲
+            let playlist_count_max = 100//プレイリストの曲数の上限
+            while pass_char != "NO MUSIC" && playlist.count <= playlist_count_max {
                 // 対応となる曲の洗い出し
                 var single_list: [MPMediaItem] = []
                 for single in (all_song as [MPMediaItem]!) {
                     var first_char = single.title!.substringToIndex(single.title!.startIndex.advancedBy(1))
-                    first_char = checkChar(first_char)
+                    first_char = convertToSiritoriChar(first_char)
                     
                     if first_char == pass_char {
                         single_list.append(single)
@@ -87,13 +88,8 @@ class ViewController: UIViewController, MPMediaPickerControllerDelegate, SimpleP
                     pass_char = lastChar(single_list[select_next].title!)
                 }
             }
-            // 確認用（コンソールにプレイリストを出力）
-            for single in (playlist as [MPMediaItem]!) {
-                let title = single.title ?? "no title"
-                let artist = single.artist ?? "no artist"
-                let text = title + " | " + artist
-                print(text)
-            }
+            debugPlayList(playlist)// 確認用（コンソールにプレイリストを出力）
+            displayMusicInfo(playlist[0])//1曲目の情報を表示（2曲目以降の表示に対応していない気がするので、修正必要かも）
             player.pickItems(playlist)// プレイリストの登録
         }
     }
@@ -104,8 +100,24 @@ class ViewController: UIViewController, MPMediaPickerControllerDelegate, SimpleP
     func makePlaynumberDecendingList(){
     }
     
-    // しりとりできる文字かどうかの判定をする関数
-    func checkChar(cha: String) -> String {
+    func debugPlayList(playlist: [MPMediaItem]){
+        for single in (playlist as [MPMediaItem]!) {
+            let title = single.title ?? "no title"
+            let artist = single.artist ?? "no artist"
+            let text = title + " | " + artist
+            print(text)
+        }
+    }
+    
+    func displayMusicInfo(playlist: MPMediaItem){
+        let title = playlist.title ?? "no title"
+        let artist = playlist.artist ?? "no artist"
+        let text = title + " | " + artist
+        updateMessage(text)
+    }
+    
+    // しりとりできる文字に変換する関数
+    func convertToSiritoriChar(cha: String) -> String {
         if let che = transList[cha] {
             return che
         }
@@ -125,7 +137,7 @@ class ViewController: UIViewController, MPMediaPickerControllerDelegate, SimpleP
             last_char_num--
             last_char = text_temp.substringFromIndex(text_temp.startIndex.advancedBy(last_char_num))
             text_temp = text.substringToIndex(text.startIndex.advancedBy(last_char_num))
-            last_char = checkChar(last_char)
+            last_char = convertToSiritoriChar(last_char)
         }
         return last_char
     }
@@ -175,7 +187,8 @@ class ViewController: UIViewController, MPMediaPickerControllerDelegate, SimpleP
     @IBAction func pushPlayAndPauseBtn(sender: UIButton) {
         if player.nowPlaying {
             pushPause()
-        } else {
+        }
+        else {
             pushPlay()
         }
     }
