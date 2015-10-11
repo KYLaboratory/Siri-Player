@@ -94,7 +94,6 @@ class ViewController: UIViewController, MPMediaPickerControllerDelegate, SimpleP
                 }
             }
             debugPlayList(playlist)// 確認用（コンソールにプレイリストを出力）
-            displayMusicInfo(playlist[0])//1曲目の情報を表示（2曲目以降の表示に対応していない気がするので、修正必要かも）
             player.pickItems(playlist)// プレイリストの登録
             updatePlayBtnsTitle("||")
         }
@@ -119,13 +118,6 @@ class ViewController: UIViewController, MPMediaPickerControllerDelegate, SimpleP
             let text = title + " | " + artist
             print(text)
         }
-    }
-    
-    func displayMusicInfo(playlist: MPMediaItem){
-        let title = playlist.title ?? "no title"
-        let artist = playlist.artist ?? "no artist"
-        let text = title + " | " + artist
-        updateMessage(text)
     }
     
     // しりとりできる文字に変換する関数
@@ -164,6 +156,7 @@ class ViewController: UIViewController, MPMediaPickerControllerDelegate, SimpleP
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        player.delegate = self
     }
 
     override func didReceiveMemoryWarning() {
@@ -200,20 +193,18 @@ class ViewController: UIViewController, MPMediaPickerControllerDelegate, SimpleP
     @IBAction func pushPlayAndPauseBtn(sender: UIButton) {
         if player.nowPlaying {
             player.pause()
-            updatePlayBtnsTitle("▷")
         }
         else {
             player.play()
-            updatePlayBtnsTitle("||")
         }
     }
     
     @IBAction func pushNextBtn(sender: AnyObject) {
-        //player.nextItem()
+        player.nextItem()
     }
     
     @IBAction func pushPrevBtn(sender: AnyObject) {
-        //player.prevItem()
+        player.prevItem()
     }
     
     func updatePlayBtnsTitle(text: String) {
