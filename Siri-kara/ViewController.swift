@@ -95,7 +95,6 @@ class ViewController: UIViewController, MPMediaPickerControllerDelegate, SimpleP
             }
             debugPlayList(playlist)// 確認用（コンソールにプレイリストを出力）
             player.pickItems(playlist)// プレイリストの登録
-            updatePlayBtnsTitle("||")
         }
     }
     

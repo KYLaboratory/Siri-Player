@@ -37,12 +37,13 @@ class SimplePlayer: NSObject, AVAudioPlayerDelegate {
     }
     
     private func actPickItem(){
-        updatePlayer()
-        play()
+        if updatePlayer(){
+            play()
+        }
     }
     
     /// プレイヤーにitemをセットして更新
-    func updatePlayer() {
+    func updatePlayer()->Bool {
         let item = mediaItems[currentIndex]// MPMediaItemのassetURLからプレイヤーを作成する
         
         if let url: NSURL = item.assetURL {
@@ -67,7 +68,7 @@ class SimplePlayer: NSObject, AVAudioPlayerDelegate {
                 let title = item.title ?? "こ"
                 let text = title + "のurlは再生できません"
                 delegate?.updateMessage(text)
-                return
+                return false
             }
         }
         else {
@@ -76,7 +77,9 @@ class SimplePlayer: NSObject, AVAudioPlayerDelegate {
             let title = item.title ?? "こ"
             let text = title + "のurlはnilのため再生できません"
             delegate?.updateMessage(text)
+            return false
         }
+        return true
     }
     
     func play() {
@@ -93,6 +96,9 @@ class SimplePlayer: NSObject, AVAudioPlayerDelegate {
             // 再生中なので、再生&一時停止ボタンの表示を「一時停止」にする
             delegate?.updatePlayBtnsTitle("||")
         }
+        else{
+            actUpdatePlayBtnsTitle()
+        }
     }
     
     func pause() {
@@ -102,7 +108,9 @@ class SimplePlayer: NSObject, AVAudioPlayerDelegate {
             // 再生をとめたので、再生&一時停止ボタンの表示を「再生」にする
             delegate?.updatePlayBtnsTitle("▷")
         }
-        
+        else{
+            actUpdatePlayBtnsTitle()
+        }
     }
     
     func nextItem() {
@@ -126,10 +134,23 @@ class SimplePlayer: NSObject, AVAudioPlayerDelegate {
     private func actPlayItem(){
         updatePlayer()
         if nowPlaying{
-            play()
+            if updatePlayer(){
+                play()
+            }
         }
         else{
-            pause()
+            if updatePlayer(){
+                pause()
+            }
+        }
+    }
+    
+    private func actUpdatePlayBtnsTitle(){
+        if nowPlaying{
+            delegate?.updatePlayBtnsTitle("||")
+        }
+        else{
+            delegate?.updatePlayBtnsTitle("▷")
         }
     }
     
