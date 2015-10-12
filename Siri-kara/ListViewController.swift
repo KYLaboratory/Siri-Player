@@ -9,11 +9,15 @@
 import UIKit
 
 
-class ListViewController: UIViewController {
+class ListViewController: UITableViewController {
+    //class 変更 UIViewControllerからUITableViewController 151012
+    
     
     var receive_param:PLAYLIST_KIND = PLAYLIST_KIND.MAX
     
+//    @IBOutlet weak var myLabel: UILabel!
     @IBOutlet weak var myLabel: UILabel!
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
