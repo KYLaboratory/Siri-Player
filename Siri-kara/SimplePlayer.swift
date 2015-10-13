@@ -11,9 +11,9 @@ import AVFoundation
 import MediaPlayer
 
 protocol SimplePlayerDelegate {
-    func updateMessage(text: String)
+    func updateMusicLabel(text: String)
+    func updateArtistLabel(text: String)
     func updatePlayBtnsTitle(text: String)
-    
 }
 
 class SimplePlayer: NSObject, AVAudioPlayerDelegate {
@@ -29,7 +29,8 @@ class SimplePlayer: NSObject, AVAudioPlayerDelegate {
         // mediaItemCollection.itemsから入っているMPMediaItemの配列を取得できる
         //let items = mediaItemCollection.items
         if items.count == 0 {
-            delegate?.updateMessage("END")
+            delegate?.updateMusicLabel("END")
+            delegate?.updateArtistLabel("")
             delegate?.updatePlayBtnsTitle("▷")
             return  // itemが一つもなかったので戻る
         }
@@ -57,28 +58,21 @@ class SimplePlayer: NSObject, AVAudioPlayerDelegate {
                 audioPlayer?.delegate = self
                 
                 // メッセージラベルに再生中アイテム情報を表示
-                let song = item.title ?? ""
-                let artist = item.artist ?? ""
-                let text = song + " | " + artist
-                delegate?.updateMessage(text)
+                delegate?.updateMusicLabel(item.title ?? "")
+                delegate?.updateArtistLabel(item.artist ?? "")
             }
             catch  {
                 // エラー発生してプレイヤー作成失敗
                 audioPlayer = nil
-                
-                // messageLabelに失敗したことを表示
-                let title = item.title ?? "こ"
-                let text = title + "のurlは再生できません"
-                delegate?.updateMessage(text)
+                delegate?.updateMusicLabel(item.title ?? "This title")
+                delegate?.updateArtistLabel("Cannot Play")
                 return false
             }
         }
         else {
             audioPlayer = nil
-            // messageLabelにurlがnilのため失敗したことを表示
-            let title = item.title ?? "こ"
-            let text = title + "のurlはnilのため再生できません"
-            delegate?.updateMessage(text)
+            delegate?.updateMusicLabel(item.title ?? "This title")
+            delegate?.updateArtistLabel("Cannot Play(No URL)")
             return false
         }
         return true
@@ -90,10 +84,8 @@ class SimplePlayer: NSObject, AVAudioPlayerDelegate {
             nowPlaying = true
             // メッセージラベルに再生中アイテム情報を表示
             let item = mediaItems[currentIndex]
-            let song = item.title ?? ""
-            let artist = item.artist ?? ""
-            let text = song + " | " + artist
-            delegate?.updateMessage(text)
+            delegate?.updateMusicLabel(item.title ?? "")
+            delegate?.updateArtistLabel(item.artist ?? "")
             
             // 再生中なので、再生&一時停止ボタンの表示を「一時停止」にする
             delegate?.updatePlayBtnsTitle("||")
@@ -118,7 +110,8 @@ class SimplePlayer: NSObject, AVAudioPlayerDelegate {
     func nextItem() {
         if currentIndex >= mediaItems.count - 1 {
             currentIndex = mediaItems.count
-            delegate?.updateMessage("END")
+            delegate?.updateMusicLabel("END")
+            delegate?.updateArtistLabel("")
             return
         }
         currentIndex++
@@ -131,10 +124,8 @@ class SimplePlayer: NSObject, AVAudioPlayerDelegate {
         }
         else if currentIndex == mediaItems.count{
             let item = mediaItems[mediaItems.count - 1 ]
-            let song = item.title ?? ""
-            let artist = item.artist ?? ""
-            let text = song + " | " + artist
-            delegate?.updateMessage(text)
+            delegate?.updateMusicLabel(item.title ?? "")
+            delegate?.updateArtistLabel(item.artist ?? "")
             currentIndex--
             return
         }
@@ -178,7 +169,8 @@ class SimplePlayer: NSObject, AVAudioPlayerDelegate {
             currentIndex = 0
             updatePlayer()
             pause()
-            delegate?.updateMessage("END")
+            delegate?.updateMusicLabel("END")
+            delegate?.updateArtistLabel("")
             delegate?.updatePlayBtnsTitle("▷")
             return
         }

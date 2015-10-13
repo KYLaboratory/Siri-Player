@@ -28,7 +28,8 @@ class ViewController: UIViewController, MPMediaPickerControllerDelegate, SimpleP
     
     let player = SimplePlayer()
 
-    @IBOutlet weak var messageLabel: UILabel!
+    @IBOutlet weak var musicLabel: UILabel!
+    @IBOutlet weak var artistLabel: UILabel!
     @IBOutlet weak var playAndPauseBtn: UIButton!
     @IBOutlet weak var pickerView: UIPickerView!
     
@@ -55,11 +56,13 @@ class ViewController: UIViewController, MPMediaPickerControllerDelegate, SimpleP
     }
     
     func makeGenerationList(){
-        updateMessage("NONE")
+        updateMusicLabel("NONE")
+        updateArtistLabel("")
     }
     
     func makeCategoryList(){
-        updateMessage("NONE")
+        updateMusicLabel("NONE")
+        updateArtistLabel("")
     }
     
     func makeSiritoriList(){
@@ -99,15 +102,18 @@ class ViewController: UIViewController, MPMediaPickerControllerDelegate, SimpleP
     }
     
     func makePlaynumberAscendingList(){
-        updateMessage("NONE")
+        updateMusicLabel("NONE")
+        updateArtistLabel("")
     }
     
     func makePlaynumberDecendingList(){
-        updateMessage("NONE")
+        updateMusicLabel("NONE")
+        updateArtistLabel("")
     }
     
     func makeAnyList(){
-        updateMessage("NONE")
+        updateMusicLabel("NONE")
+        updateArtistLabel("")
     }
     
     func debugPlayList(playlist: [MPMediaItem]){
@@ -210,8 +216,12 @@ class ViewController: UIViewController, MPMediaPickerControllerDelegate, SimpleP
         playAndPauseBtn.setTitle(text, forState: UIControlState.Normal)
     }
     
-    func updateMessage(text: String) {
-        messageLabel.text = text
+    func updateMusicLabel(text: String) {
+        musicLabel.text = text
+    }
+    
+    func updateArtistLabel(text: String){
+        artistLabel.text = text
     }
 
 }

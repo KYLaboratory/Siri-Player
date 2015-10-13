@@ -38,12 +38,6 @@
                                     <action selector="start:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tzb-pf-fr6"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Music Info♪" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pSJ-ak-vVa">
-                                <rect key="frame" x="7" y="161" width="307" height="53"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vav-Li-ZiB">
                                 <rect key="frame" x="121" y="517" width="91" height="51"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="28"/>
@@ -68,13 +62,26 @@
                                     <action selector="pushNextBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VtV-y1-fUc"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Artist Info" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v9s-jj-esF">
+                                <rect key="frame" x="0.0" y="189" width="320" height="43"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Music Info♪" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V9b-pr-1Kl">
+                                <rect key="frame" x="0.0" y="133" width="320" height="48"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="yWy-Me-ovv"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
-                        <outlet property="messageLabel" destination="pSJ-ak-vVa" id="QDA-BU-DYm"/>
+                        <outlet property="artistLabel" destination="v9s-jj-esF" id="8Ep-Fo-84k"/>
+                        <outlet property="musicLabel" destination="V9b-pr-1Kl" id="QSj-eY-dC1"/>
                         <outlet property="pickerView" destination="lhP-t8-wTm" id="hE6-mU-Sg6"/>
                         <outlet property="playAndPauseBtn" destination="Vav-Li-ZiB" id="Wxn-5o-hLf"/>
                     </connections>
