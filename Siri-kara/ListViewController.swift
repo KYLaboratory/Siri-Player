@@ -7,26 +7,21 @@
 //
 
 import UIKit
+import MediaPlayer
 
 
 class ListViewController: UITableViewController {
-    //class 変更 UIViewControllerからUITableViewController 151012
     
+    var receive_param :[MPMediaItem] = []
     
-    var receive_param:PLAYLIST_KIND = PLAYLIST_KIND.MAX
-    
-//    @IBOutlet weak var myLabel: UILabel!
     @IBOutlet weak var myLabel: UILabel!
-
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        if receive_param == PLAYLIST_KIND.SIRITORI{
-            myLabel.text = "SIRITORI"
-        }
-        else{
-            myLabel.text = "NONE"
-        }
+        
+        let title = receive_param[0].title ?? "no title"
+        let artist = receive_param[0].artist ?? "no artist"
+        let text = title + " | " + artist
+        myLabel.text = text
     }
     
     override func didReceiveMemoryWarning() {

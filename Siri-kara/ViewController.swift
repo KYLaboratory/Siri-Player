@@ -65,11 +65,12 @@ class ViewController: UIViewController, MPMediaPickerControllerDelegate, SimpleP
         updateArtistLabel("")
     }
     
+    var playlist: [MPMediaItem] = []
     func makeSiritoriList(){
         let songQuery = MPMediaQuery.songsQuery()
         if let all_song = songQuery.items as [MPMediaItem]! {
             
-            var playlist: [MPMediaItem] = []
+            //var playlist: [MPMediaItem] = []
             let select_first = Int(arc4random_uniform(UInt32(all_song.count)))// 最初の曲を選択
             playlist.append(all_song[select_first])
             var pass_char = lastChar(all_song[select_first].title!)
@@ -154,8 +155,7 @@ class ViewController: UIViewController, MPMediaPickerControllerDelegate, SimpleP
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!){
         if(segue.identifier == "goListViewsegue"){
             let listViewController:ListViewController = segue.destinationViewController as! ListViewController
-            let selectedRow = pickerView.selectedRowInComponent(0)
-            listViewController.receive_param = PLAYLIST_KIND(rawValue: selectedRow)!
+            listViewController.receive_param = playlist
         }
     }
     
