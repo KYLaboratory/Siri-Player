@@ -37,6 +37,24 @@ class SimplePlayer: NSObject, AVAudioPlayerDelegate {
         mediaItems = items
         currentIndex = 0
         actPickItem()
+        
+        let audioSession: AVAudioSession = AVAudioSession.sharedInstance()
+        
+        do{
+            try audioSession.setCategory(AVAudioSessionCategoryPlayback)
+        }
+        catch{
+            fatalError("カテゴリ設定失敗")
+        }
+        
+        do{
+            try audioSession.setActive(true)
+        }
+        catch{
+            fatalError("session有効化失敗")
+        }
+
+        
     }
     
     private func actPickItem(){

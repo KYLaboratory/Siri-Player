@@ -199,6 +199,11 @@
 					35FEEAE71BC810110090EA67 = {
 						CreatedOnToolsVersion = 7.0;
 						DevelopmentTeam = 7J672TXVNA;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 					35FEEAFB1BC810110090EA67 = {
 						CreatedOnToolsVersion = 7.0;
