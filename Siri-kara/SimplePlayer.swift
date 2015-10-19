@@ -34,6 +34,7 @@ class SimplePlayer: NSObject, AVAudioPlayerDelegate {
             delegate?.updatePlayBtnsTitle("▷")
             return  // itemが一つもなかったので戻る
         }
+        mediaItems.removeAll()
         mediaItems = items
         currentIndex = 0
         actPickItem()

@@ -67,10 +67,9 @@ class ViewController: UIViewController, MPMediaPickerControllerDelegate, SimpleP
     
     var playlist: [MPMediaItem] = []
     func makeSiritoriList(){
+        playlist.removeAll()
         let songQuery = MPMediaQuery.songsQuery()
         if let all_song = songQuery.items as [MPMediaItem]! {
-            
-            //var playlist: [MPMediaItem] = []
             let select_first = Int(arc4random_uniform(UInt32(all_song.count)))// 最初の曲を選択
             playlist.append(all_song[select_first])
             var pass_char = lastChar(all_song[select_first].title!)
