@@ -264,11 +264,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Siri-kara/SimplePlayer.swift"
-            timestampString = "466956200.241656"
+            timestampString = "467071605.832364"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "191"
-            endingLineNumber = "191"
+            startingLineNumber = "197"
+            endingLineNumber = "197"
             landmarkName = "audioPlayerDidFinishPlaying(_:successfully:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -280,11 +280,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Siri-kara/SimplePlayer.swift"
-            timestampString = "466956200.241656"
+            timestampString = "467071605.832364"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "145"
-            endingLineNumber = "145"
+            startingLineNumber = "151"
+            endingLineNumber = "151"
             landmarkName = "prevItem()"
             landmarkType = "5">
          </BreakpointContent>
@@ -296,11 +296,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Siri-kara/SimplePlayer.swift"
-            timestampString = "466956200.241656"
+            timestampString = "467071605.832364"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "159"
-            endingLineNumber = "159"
+            startingLineNumber = "165"
+            endingLineNumber = "165"
             landmarkName = "actPlayItem()"
             landmarkType = "5">
          </BreakpointContent>
@@ -312,11 +312,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Siri-kara/SimplePlayer.swift"
-            timestampString = "466956200.241656"
+            timestampString = "467071605.832364"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "152"
-            endingLineNumber = "152"
+            startingLineNumber = "158"
+            endingLineNumber = "158"
             landmarkName = "prevItem()"
             landmarkType = "5">
          </BreakpointContent>
@@ -328,11 +328,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Siri-kara/SimplePlayer.swift"
-            timestampString = "466956200.241656"
+            timestampString = "467071605.832364"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "136"
-            endingLineNumber = "136"
+            startingLineNumber = "142"
+            endingLineNumber = "142"
             landmarkName = "nextItem()"
             landmarkType = "5">
          </BreakpointContent>
@@ -360,11 +360,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Siri-kara/SimplePlayer.swift"
-            timestampString = "466956200.241656"
+            timestampString = "467070883.075022"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "92"
-            endingLineNumber = "92"
+            startingLineNumber = "93"
+            endingLineNumber = "93"
             landmarkName = "updatePlayer()"
             landmarkType = "5">
          </BreakpointContent>
@@ -398,6 +398,22 @@
             startingLineNumber = "47"
             endingLineNumber = "47"
             landmarkName = "pickItems(_:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Siri-kara/SimplePlayer.swift"
+            timestampString = "467071407.95269"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "88"
+            endingLineNumber = "88"
+            landmarkName = "updatePlayer()"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

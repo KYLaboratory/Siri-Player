@@ -85,6 +85,7 @@ class SimplePlayer: NSObject, AVAudioPlayerDelegate {
                 audioPlayer = nil
                 delegate?.updateMusicLabel(item.title ?? "This title")
                 delegate?.updateArtistLabel("Cannot Play")
+                NSTimer.scheduledTimerWithTimeInterval(2, target: self, selector: "actError", userInfo: nil, repeats: false)
                 return false
             }
         }
@@ -92,9 +93,14 @@ class SimplePlayer: NSObject, AVAudioPlayerDelegate {
             audioPlayer = nil
             delegate?.updateMusicLabel(item.title ?? "This title")
             delegate?.updateArtistLabel("Cannot Play(No URL)")
+            NSTimer.scheduledTimerWithTimeInterval(2, target: self, selector: "actError", userInfo: nil, repeats: false)
             return false
         }
         return true
+    }
+    
+    func actError(){
+        nextItem()
     }
     
     func play() {
