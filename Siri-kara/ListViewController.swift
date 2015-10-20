@@ -17,11 +17,12 @@ class ListViewController: UITableViewController {
     @IBOutlet weak var myLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        let title = receive_param[0].title ?? "no title"
-        let artist = receive_param[0].artist ?? "no artist"
-        let text = title + " | " + artist
-        myLabel.text = text
+        if receive_param.count > 0{
+            let title = receive_param[0].title ?? "no title"
+            let artist = receive_param[0].artist ?? "no artist"
+            let text = title + " | " + artist
+            myLabel.text = text
+        }
     }
     
     override func didReceiveMemoryWarning() {
