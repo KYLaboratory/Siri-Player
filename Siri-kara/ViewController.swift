@@ -235,7 +235,7 @@ class ViewController: UIViewController, MPMediaPickerControllerDelegate, SimpleP
         }
         
         return nil
-    }
+    } // アートワークがない曲の記述をする。エラー処理でダミー画像を挟む。if else文で。
 
 }
 

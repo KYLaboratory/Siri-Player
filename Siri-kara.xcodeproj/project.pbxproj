@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		35CBAC191BC95627007E9184 /* SimplePlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35CBAC181BC95627007E9184 /* SimplePlayer.swift */; settings = {ASSET_TAGS = (); }; };
+		35CBAC191BC95627007E9184 /* SimplePlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35CBAC181BC95627007E9184 /* SimplePlayer.swift */; };
 		35FEEAEC1BC810110090EA67 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35FEEAEB1BC810110090EA67 /* AppDelegate.swift */; };
 		35FEEAEE1BC810110090EA67 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35FEEAED1BC810110090EA67 /* ViewController.swift */; };
 		35FEEAF11BC810110090EA67 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35FEEAEF1BC810110090EA67 /* Main.storyboard */; };
@@ -15,7 +15,7 @@
 		35FEEAF61BC810110090EA67 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35FEEAF41BC810110090EA67 /* LaunchScreen.storyboard */; };
 		35FEEB011BC810110090EA67 /* Siri_karaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35FEEB001BC810110090EA67 /* Siri_karaTests.swift */; };
 		35FEEB0C1BC810110090EA67 /* Siri_karaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35FEEB0B1BC810110090EA67 /* Siri_karaUITests.swift */; };
-		4F8AF5711BC8B655004B3004 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F8AF5701BC8B655004B3004 /* ListViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		4F8AF5711BC8B655004B3004 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F8AF5701BC8B655004B3004 /* ListViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -198,7 +198,7 @@
 				TargetAttributes = {
 					35FEEAE71BC810110090EA67 = {
 						CreatedOnToolsVersion = 7.0;
-						DevelopmentTeam = 7J672TXVNA;
+						DevelopmentTeam = RHYK85BLUX;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
 								enabled = 1;
@@ -416,7 +416,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "Siri-kara/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "esper.Siri-kara";
+				PRODUCT_BUNDLE_IDENTIFIER = "Siri-kara";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 1;
@@ -431,7 +431,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "Siri-kara/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "esper.Siri-kara";
+				PRODUCT_BUNDLE_IDENTIFIER = "Siri-kara";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 1;
