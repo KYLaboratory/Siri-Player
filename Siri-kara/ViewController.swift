@@ -33,6 +33,8 @@ class ViewController: UIViewController, MPMediaPickerControllerDelegate, SimpleP
     @IBOutlet weak var playAndPauseBtn: UIButton!
 //    @IBOutlet weak var pickerView: UIPickerView!
     
+    @IBOutlet weak var albumArtwork: UIImageView!
+    
     @IBAction func start(sender: AnyObject) {
         makeSiritoriList()
         /*
@@ -226,7 +228,14 @@ class ViewController: UIViewController, MPMediaPickerControllerDelegate, SimpleP
         artistLabel.text = text
     }
     
-    //func updateJacket(
+    func updateArtworkImage(item: MPMediaItem)-> UIImage? {
+        let size = CGSize(width: 100, height: 100)
+        if let artwork = item.artwork {
+            return artwork.imageWithSize(size)
+        }
+        
+        return nil
+    }
 
 }
 
