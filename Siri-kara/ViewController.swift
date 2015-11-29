@@ -31,10 +31,11 @@ class ViewController: UIViewController, MPMediaPickerControllerDelegate, SimpleP
     @IBOutlet weak var musicLabel: UILabel!
     @IBOutlet weak var artistLabel: UILabel!
     @IBOutlet weak var playAndPauseBtn: UIButton!
-    @IBOutlet weak var pickerView: UIPickerView!
+//    @IBOutlet weak var pickerView: UIPickerView!
     
     @IBAction func start(sender: AnyObject) {
-        
+        makeSiritoriList()
+        /*
         let selectedRow = pickerView.selectedRowInComponent(0)
         
         switch PLAYLIST_KIND(rawValue: selectedRow)!{
@@ -52,7 +53,7 @@ class ViewController: UIViewController, MPMediaPickerControllerDelegate, SimpleP
             makeAnyList()
         default:
             assert(false)//C.H.
-        }
+        }*/
     }
     
     func makeGenerationList(){
@@ -167,6 +168,8 @@ class ViewController: UIViewController, MPMediaPickerControllerDelegate, SimpleP
         super.didReceiveMemoryWarning()
     }
     
+    //リスト作りのPickerの記述をコメントアウト 151129
+    /*
     func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
         return 1
     }
@@ -177,7 +180,7 @@ class ViewController: UIViewController, MPMediaPickerControllerDelegate, SimpleP
     
     func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         return howToMakePlaylist[row]  // 1列目のrow番目に表示する値
-    }
+    }*/
 
     // メディアアイテムピッカーでアイテムを選択完了したときに呼び出される
     func mediaPicker(mediaPicker: MPMediaPickerController, didPickMediaItems mediaItemCollection: MPMediaItemCollection) {
@@ -222,6 +225,8 @@ class ViewController: UIViewController, MPMediaPickerControllerDelegate, SimpleP
     func updateArtistLabel(text: String){
         artistLabel.text = text
     }
+    
+    //func updateJacket(
 
 }
 
