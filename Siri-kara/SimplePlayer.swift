@@ -14,7 +14,8 @@ protocol SimplePlayerDelegate {
     func updateMusicLabel(text: String)
     func updateArtistLabel(text: String)
     func updatePlayBtnsTitle(text: String)
-    func updateArtworkImage(item: MPMediaItem)-> UIImage?  //tsuiki1
+    func updateArtworkImage(Artwork: MPMediaItemArtwork) //tsuiki1
+    func updateDummyArtworkImage() //tsuiki1
 }
 
 class SimplePlayer: NSObject, AVAudioPlayerDelegate {
@@ -33,7 +34,7 @@ class SimplePlayer: NSObject, AVAudioPlayerDelegate {
             delegate?.updateMusicLabel("END")
             delegate?.updateArtistLabel("")
             delegate?.updatePlayBtnsTitle("▷")
-         //   delegate?.updateArtworkImage(item) //tsuiki1
+            delegate?.updateDummyArtworkImage()
             
             return  // itemが一つもなかったので戻る
         }
@@ -82,14 +83,18 @@ class SimplePlayer: NSObject, AVAudioPlayerDelegate {
                 // メッセージラベルに再生中アイテム情報を表示
                 delegate?.updateMusicLabel(item.title ?? "")
                 delegate?.updateArtistLabel(item.artist ?? "")
-                delegate?.updateArtworkImage(item) //tsuiki1
+                if(item.artwork != nil){
+                    delegate?.updateArtworkImage(item.artwork!) //tsuiki1
+                } else {
+                    delegate?.updateDummyArtworkImage() //tsuiki1
+                }
             }
             catch  {
                 // エラー発生してプレイヤー作成失敗
                 audioPlayer = nil
                 delegate?.updateMusicLabel(item.title ?? "This title")
                 delegate?.updateArtistLabel("Cannot Play")
-                delegate?.updateArtworkImage(item) //tsuiki1
+                delegate?.updateDummyArtworkImage()
                 NSTimer.scheduledTimerWithTimeInterval(2, target: self, selector: "actError", userInfo: nil, repeats: false)
                 return false
             }
@@ -98,7 +103,7 @@ class SimplePlayer: NSObject, AVAudioPlayerDelegate {
             audioPlayer = nil
             delegate?.updateMusicLabel(item.title ?? "This title")
             delegate?.updateArtistLabel("Cannot Play(No URL)")
-            delegate?.updateArtworkImage(item) //tsuiki1
+            delegate?.updateDummyArtworkImage()
             NSTimer.scheduledTimerWithTimeInterval(2, target: self, selector: "actError", userInfo: nil, repeats: false)
             return false
         }
@@ -117,7 +122,11 @@ class SimplePlayer: NSObject, AVAudioPlayerDelegate {
             let item = mediaItems[currentIndex]
             delegate?.updateMusicLabel(item.title ?? "")
             delegate?.updateArtistLabel(item.artist ?? "")
-            delegate?.updateArtworkImage(item) //tsuiki1
+            if(item.artwork != nil){
+                delegate?.updateArtworkImage(item.artwork!) //tsuiki1
+            } else {
+                delegate?.updateDummyArtworkImage() //tsuiki1
+            }
             
             // 再生中なので、再生&一時停止ボタンの表示を「一時停止」にする
             delegate?.updatePlayBtnsTitle("||")
@@ -144,7 +153,7 @@ class SimplePlayer: NSObject, AVAudioPlayerDelegate {
             currentIndex = mediaItems.count
             delegate?.updateMusicLabel("END")
             delegate?.updateArtistLabel("")
-//            delegate?.updateArtworkImage() //tsuiki1
+            delegate?.updateDummyArtworkImage()
             return
         }
         currentIndex++
@@ -159,7 +168,11 @@ class SimplePlayer: NSObject, AVAudioPlayerDelegate {
             let item = mediaItems[mediaItems.count - 1 ]
             delegate?.updateMusicLabel(item.title ?? "")
             delegate?.updateArtistLabel(item.artist ?? "")
-            delegate?.updateArtworkImage(item) //tsuiki1
+            if(item.artwork != nil){
+                delegate?.updateArtworkImage(item.artwork!) //tsuiki1
+            } else {
+                delegate?.updateDummyArtworkImage() //tsuiki1
+            }
             currentIndex--
             return
         }
@@ -206,7 +219,7 @@ class SimplePlayer: NSObject, AVAudioPlayerDelegate {
             delegate?.updateMusicLabel("END")
             delegate?.updateArtistLabel("")
             delegate?.updatePlayBtnsTitle("▷")
-            //delegate?.updateArtworkImage(item) //tsuiki1
+            delegate?.updateDummyArtworkImage()
             return
         }
         else {

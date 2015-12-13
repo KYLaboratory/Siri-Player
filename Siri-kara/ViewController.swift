@@ -228,14 +228,19 @@ class ViewController: UIViewController, MPMediaPickerControllerDelegate, SimpleP
         artistLabel.text = text
     }
     
-    func updateArtworkImage(item: MPMediaItem)-> UIImage? {
+    
+    func updateArtworkImage(Artwork: MPMediaItemArtwork){
         let size = CGSize(width: 100, height: 100)
-        if let artwork = item.artwork {
-            albumArtwork.image = artwork.imageWithSize(size)
+            albumArtwork.image = Artwork.imageWithSize(size)
         }
-        
-        return nil
-    } // アートワークがない曲の記述をする。エラー処理でダミー画像を挟む。if else文で。
+    
+    func updateDummyArtworkImage(){
+        //let size = CGSize(width: 100, height: 100)
+        let dummyImage = UIImage(named: "bb6917a4.png")
+    //関係ない画像を入れる
+        albumArtwork.image = dummyImage
+        } // アートワークがない曲の記述をする。エラー処理でダミー画像を挟む。if else文で。
+    
 
 }
 
