@@ -26,6 +26,8 @@ class SimplePlayer: NSObject, AVAudioPlayerDelegate {
     private var currentIndex: Int = 0
     private (set) var nowPlaying: Bool = false
     
+    var talker = AVSpeechSynthesizer()
+    
     func pickItems(items: [MPMediaItem]) {
         // 選択した曲情報がmediaItemCollectionに入っている
         // mediaItemCollection.itemsから入っているMPMediaItemの配列を取得できる
@@ -83,11 +85,22 @@ class SimplePlayer: NSObject, AVAudioPlayerDelegate {
                 // メッセージラベルに再生中アイテム情報を表示
                 delegate?.updateMusicLabel(item.title ?? "")
                 delegate?.updateArtistLabel(item.artist ?? "")
+                //ジャケット表示
                 if(item.artwork != nil){
                     delegate?.updateArtworkImage(item.artwork!) //tsuiki1
                 } else {
                     delegate?.updateDummyArtworkImage() //tsuiki1
                 }
+                
+                // タイトルの読み上げ
+                if talker.speaking {
+                    talker.stopSpeakingAtBoundary(AVSpeechBoundary.Immediate)
+                }
+                let readStr = "次の曲は、" + item.title! + "となります。よぉ　チェケラ！"
+                //                let readStr = "Next song is " + item.title! + ". Yoh, check it out!!"
+                let utterance = AVSpeechUtterance(string: readStr)
+                //                utterance.voice = AVSpeechSynthesisVoice(language: "en-US")
+                talker.speakUtterance(utterance)
             }
             catch  {
                 // エラー発生してプレイヤー作成失敗
@@ -214,7 +227,7 @@ class SimplePlayer: NSObject, AVAudioPlayerDelegate {
         // 最後の曲の場合は終了。そうでないなら次の曲へ
         if currentIndex >= mediaItems.count - 1{
             currentIndex = 0
-            updatePlayer()
+//            updatePlayer() // このupdatePlayerの呼び出しによるエラーがあったのでコメントアウトしました
             pause()
             delegate?.updateMusicLabel("END")
             delegate?.updateArtistLabel("")
