@@ -27,6 +27,7 @@ class SimplePlayer: NSObject, AVAudioPlayerDelegate {
     func pickItems(items: [MPMediaItem]) {
         // 選択した曲情報がmediaItemCollectionに入っている
         // mediaItemCollection.itemsから入っているMPMediaItemの配列を取得できる
+        //let items = mediaItemCollection.items
         if items.count == 0 {
             delegate?.updateMusicLabel("END")
             delegate?.updateArtistLabel("")
