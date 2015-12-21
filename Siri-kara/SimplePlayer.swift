@@ -97,9 +97,7 @@ class SimplePlayer: NSObject, AVAudioPlayerDelegate {
                     talker.stopSpeakingAtBoundary(AVSpeechBoundary.Immediate)
                 }
                 let readStr = "次の曲は、" + item.title! + "となります。よぉ　チェケラ！"
-                //                let readStr = "Next song is " + item.title! + ". Yoh, check it out!!"
                 let utterance = AVSpeechUtterance(string: readStr)
-                //                utterance.voice = AVSpeechSynthesisVoice(language: "en-US")
                 talker.speakUtterance(utterance)
             }
             catch  {
@@ -194,7 +192,7 @@ class SimplePlayer: NSObject, AVAudioPlayerDelegate {
     }
     
     private func actPlayItem(){
-        //updatePlayer()
+        updatePlayer()
         if nowPlaying{
             if updatePlayer(){
                 play()

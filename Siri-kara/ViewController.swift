@@ -31,31 +31,10 @@ class ViewController: UIViewController, MPMediaPickerControllerDelegate, SimpleP
     @IBOutlet weak var musicLabel: UILabel!
     @IBOutlet weak var artistLabel: UILabel!
     @IBOutlet weak var playAndPauseBtn: UIButton!
-//    @IBOutlet weak var pickerView: UIPickerView!
-    
     @IBOutlet weak var albumArtwork: UIImageView!
     
     @IBAction func start(sender: AnyObject) {
         makeSiritoriList()
-        /*
-        let selectedRow = pickerView.selectedRowInComponent(0)
-        
-        switch PLAYLIST_KIND(rawValue: selectedRow)!{
-        case .GENERATION:
-            makeGenerationList()
-        case .CATEGORY:
-            makeCategoryList()
-        case .SIRITORI:
-            makeSiritoriList()
-        case .PLAYNUMBER_ASCENDING:
-            makePlaynumberAscendingList()
-        case .PLAYNUMBER_DECENDING:
-            makePlaynumberDecendingList()
-        case .MAKE_ANITHING:
-            makeAnyList()
-        default:
-            assert(false)//C.H.
-        }*/
     }
     
     func makeGenerationList(){
@@ -86,8 +65,6 @@ class ViewController: UIViewController, MPMediaPickerControllerDelegate, SimpleP
                 // 対応となる曲の洗い出し
                 var single_list: [MPMediaItem] = []
                 for single in (all_song as [MPMediaItem]!) {
-                    //                    var first_char = single.title!.substringToIndex(single.title!.startIndex.advancedBy(1))
-                    //                    first_char = convertToSiritoriChar(first_char)
                     let first_char = firstChar(single.title!)
                     
                     if first_char == pass_char {
@@ -193,20 +170,6 @@ class ViewController: UIViewController, MPMediaPickerControllerDelegate, SimpleP
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
-    
-    //リスト作りのPickerの記述をコメントアウト 151129
-    /*
-    func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
-        return 1
-    }
-    
-    func pickerView(pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return howToMakePlaylist.count;  // 1列目の選択肢の数
-    }
-    
-    func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return howToMakePlaylist[row]  // 1列目のrow番目に表示する値
-    }*/
 
     // メディアアイテムピッカーでアイテムを選択完了したときに呼び出される
     func mediaPicker(mediaPicker: MPMediaPickerController, didPickMediaItems mediaItemCollection: MPMediaItemCollection) {
@@ -259,9 +222,8 @@ class ViewController: UIViewController, MPMediaPickerControllerDelegate, SimpleP
         }
     
     func updateDummyArtworkImage(){
-        //let size = CGSize(width: 100, height: 100)
         let dummyImage = UIImage(named: "bb6917a4.png")
-    //関係ない画像を入れる
+        //関係ない画像を入れる
         albumArtwork.image = dummyImage
         } // アートワークがない曲の記述をする。エラー処理でダミー画像を挟む。if else文で。
     
