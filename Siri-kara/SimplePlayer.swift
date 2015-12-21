@@ -43,10 +43,11 @@ class SimplePlayer: NSObject, AVAudioPlayerDelegate {
         mediaItems.removeAll()
         mediaItems = items
         currentIndex = 0
-        actPickItem()
-        
+        if updatePlayer(){
+            play()
+        }
+
         let audioSession: AVAudioSession = AVAudioSession.sharedInstance()
-        
         do{
             try audioSession.setCategory(AVAudioSessionCategoryPlayback)
         }
@@ -60,16 +61,9 @@ class SimplePlayer: NSObject, AVAudioPlayerDelegate {
         catch{
             fatalError("session有効化失敗")
         }
+    }
+    
 
-        
-    }
-    
-    private func actPickItem(){
-        if updatePlayer(){
-            play()
-        }
-    }
-    
     /// プレイヤーにitemをセットして更新
     func updatePlayer()->Bool {
         let item = mediaItems[currentIndex]// MPMediaItemのassetURLからプレイヤーを作成する
@@ -181,7 +175,8 @@ class SimplePlayer: NSObject, AVAudioPlayerDelegate {
             delegate?.updateArtistLabel(item.artist ?? "")
             if(item.artwork != nil){
                 delegate?.updateArtworkImage(item.artwork!) //tsuiki1
-            } else {
+            }
+            else {
                 delegate?.updateDummyArtworkImage() //tsuiki1
             }
             currentIndex--
@@ -192,7 +187,6 @@ class SimplePlayer: NSObject, AVAudioPlayerDelegate {
     }
     
     private func actPlayItem(){
-        updatePlayer()
         if nowPlaying{
             if updatePlayer(){
                 play()
@@ -203,7 +197,7 @@ class SimplePlayer: NSObject, AVAudioPlayerDelegate {
         }
         else{
             if updatePlayer(){
-                pause()
+                play()
             }
             else{
                 delegate?.updatePlayBtnsTitle("||")
@@ -225,7 +219,6 @@ class SimplePlayer: NSObject, AVAudioPlayerDelegate {
         // 最後の曲の場合は終了。そうでないなら次の曲へ
         if currentIndex >= mediaItems.count - 1{
             currentIndex = 0
-//            updatePlayer() // このupdatePlayerの呼び出しによるエラーがあったのでコメントアウトしました
             pause()
             delegate?.updateMusicLabel("END")
             delegate?.updateArtistLabel("")
