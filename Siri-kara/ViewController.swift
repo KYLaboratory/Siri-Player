@@ -222,7 +222,7 @@ class ViewController: UIViewController, MPMediaPickerControllerDelegate, SimpleP
         }
     
     func updateDummyArtworkImage(){
-        let dummyImage = UIImage(named: "bb6917a4.png")
+        let dummyImage = UIImage(named: "icon_136701_256.png")
         //関係ない画像を入れる
         albumArtwork.image = dummyImage
         } // アートワークがない曲の記述をする。エラー処理でダミー画像を挟む。if else文で。

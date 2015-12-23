@@ -46,7 +46,7 @@ class ListViewController: UITableViewController {
         if let artwork = item.artwork {
             return artwork.imageWithSize(size)
         } else{
-            let dummyImage = UIImage(named: "bb6917a4.png")
+            let dummyImage = UIImage(named: "icon_136701_256.png")
             return dummyImage
         }
         
