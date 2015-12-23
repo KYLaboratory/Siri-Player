@@ -31,9 +31,9 @@ class ListViewController: UITableViewController {
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("ListCell", forIndexPath: indexPath)
-        cell.textLabel!.text = receive_param[indexPath.row].title! + " | " + receive_param[indexPath.row].artist!
+        cell.textLabel!.text = receive_param[indexPath.row].title!
+        cell.detailTextLabel!.text = receive_param[indexPath.row].artist!
         cell.imageView?.image = getArtworkImage(receive_param[indexPath.row])
-
         return cell
     }
     
@@ -42,11 +42,14 @@ class ListViewController: UITableViewController {
 
     func getArtworkImage(item: MPMediaItem) -> UIImage? {
         // 曲に設定されてるアートワークを取得
-        let size = CGSize(width: 40, height: 40)
+        let size = CGSize(width: 100, height: 100)
         if let artwork = item.artwork {
             return artwork.imageWithSize(size)
+        } else{
+            let dummyImage = UIImage(named: "bb6917a4.png")
+            return dummyImage
         }
-        return nil
+        
     }
     
     

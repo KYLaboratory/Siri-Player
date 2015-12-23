@@ -217,7 +217,7 @@ class ViewController: UIViewController, MPMediaPickerControllerDelegate, SimpleP
     
     
     func updateArtworkImage(Artwork: MPMediaItemArtwork){
-        let size = CGSize(width: 100, height: 100)
+        let size = CGSize(width: 200, height: 200)
             albumArtwork.image = Artwork.imageWithSize(size)
         }
     
