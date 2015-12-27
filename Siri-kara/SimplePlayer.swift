@@ -198,7 +198,7 @@ class SimplePlayer: NSObject, AVAudioPlayerDelegate {
         }
         else{
             if updatePlayer(){
-                play()
+                pause()
             }
             else{
                 delegate?.updatePlayBtnsTitle("||")
