@@ -46,7 +46,8 @@ class SimplePlayer: NSObject, AVAudioPlayerDelegate {
         if updatePlayer(){
             play()
         }
-
+        
+        //バックグラウンド再生するための設定
         let audioSession: AVAudioSession = AVAudioSession.sharedInstance()
         do{
             try audioSession.setCategory(AVAudioSessionCategoryPlayback)
@@ -64,7 +65,7 @@ class SimplePlayer: NSObject, AVAudioPlayerDelegate {
     }
     
 
-    /// プレイヤーにitemをセットして更新
+    // プレイヤーにitemをセットして更新
     func updatePlayer()->Bool {
         let item = mediaItems[currentIndex]// MPMediaItemのassetURLからプレイヤーを作成する
         

@@ -227,6 +227,20 @@ class ViewController: UIViewController, MPMediaPickerControllerDelegate, SimpleP
         albumArtwork.image = dummyImage
         } // アートワークがない曲の記述をする。エラー処理でダミー画像を挟む。if else文で。
     
+    //バックグラウンドで連続再生するためにイベントを最初に受け取るファーストレスポンダにする
+    override func canBecomeFirstResponder() -> Bool {
+        return true
+    }
 
+    //Viewの表示、非表示のタイミングでファーストレスポンダの登録と解除を行う
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        self.becomeFirstResponder()
+    }
+    
+    override func viewWillDisappear(animated: Bool) {
+        super.viewWillDisappear(animated)
+        self.resignFirstResponder()
+    }
 }
 
