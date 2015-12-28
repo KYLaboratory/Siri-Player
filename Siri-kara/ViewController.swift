@@ -31,8 +31,6 @@ class ViewController: UIViewController, MPMediaPickerControllerDelegate, SimpleP
     @IBOutlet weak var musicLabel: UILabel!
     @IBOutlet weak var artistLabel: UILabel!
     @IBOutlet weak var playAndPauseBtn: UIButton!
-//    @IBOutlet weak var nextBtn: UIButton!
-//    @IBOutlet weak var prevBtn: UIButton!
     @IBOutlet weak var albumArtwork: UIImageView!
 
     let playBtnImage:UIImage? = UIImage(named:"icon_play")
@@ -132,7 +130,6 @@ class ViewController: UIViewController, MPMediaPickerControllerDelegate, SimpleP
     func firstChar(text: String) -> String {
         var text_temp = text
         var first_char = ""
-        //        var first_char_num = 0
         
         // しりとりできる文字を見つけるまで繰り返し
         while first_char == "" && text_temp.characters.count > 0 {
@@ -170,7 +167,6 @@ class ViewController: UIViewController, MPMediaPickerControllerDelegate, SimpleP
     override func viewDidLoad() {
         super.viewDidLoad()
         player.delegate = self
-        //playAndPauseBtn.setImage(playBtnImage!, forState: .Normal)
         updateDummyArtworkImage()
         
     }
@@ -214,10 +210,10 @@ class ViewController: UIViewController, MPMediaPickerControllerDelegate, SimpleP
     func updatePlayBtnsTitle(text: String) {
         if text == "▷"{
             playAndPauseBtn.setImage(playBtnImage, forState: UIControlState.Normal)
-        }else if text == "||"{
+        }
+        else if text == "||"{
             playAndPauseBtn.setImage(pauseBtnImage, forState: UIControlState.Normal)
         }
-        //playAndPauseBtn.setTitle(text, forState: UIControlState.Normal)
     }
     
     func updateMusicLabel(text: String) {
