@@ -58,7 +58,7 @@
                                     <attributedString key="attributedTitle">
                                         <fragment>
                                             <string key="content">しりとり
-作成！！</string>
+　始め！</string>
                                             <attributes>
                                                 <font key="NSFont" size="28" name="HiraKakuProN-W3"/>
                                                 <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
