@@ -43,9 +43,9 @@ class SimplePlayer: NSObject, AVAudioPlayerDelegate {
         mediaItems.removeAll()
         mediaItems = items
         currentIndex = 0
-        if updatePlayer(){
-            play()
-        }
+        
+        //リモートコントロールイベントを受け取るための設定を追加
+        UIApplication.sharedApplication().beginReceivingRemoteControlEvents()
         
         //バックグラウンド再生するための設定
         let audioSession: AVAudioSession = AVAudioSession.sharedInstance()
@@ -55,12 +55,15 @@ class SimplePlayer: NSObject, AVAudioPlayerDelegate {
         catch{
             fatalError("カテゴリ設定失敗")
         }
-        
         do{
             try audioSession.setActive(true)
         }
         catch{
             fatalError("session有効化失敗")
+        }
+        
+        if updatePlayer(){
+            play()
         }
     }
     
