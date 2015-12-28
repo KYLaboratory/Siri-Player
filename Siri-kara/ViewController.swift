@@ -31,8 +31,13 @@ class ViewController: UIViewController, MPMediaPickerControllerDelegate, SimpleP
     @IBOutlet weak var musicLabel: UILabel!
     @IBOutlet weak var artistLabel: UILabel!
     @IBOutlet weak var playAndPauseBtn: UIButton!
+//    @IBOutlet weak var nextBtn: UIButton!
+//    @IBOutlet weak var prevBtn: UIButton!
     @IBOutlet weak var albumArtwork: UIImageView!
-    
+
+    let playBtnImage:UIImage? = UIImage(named:"icon_play")
+    let pauseBtnImage:UIImage? = UIImage(named:"icon_pause")
+
     @IBAction func start(sender: AnyObject) {
         makeSiritoriList()
     }
@@ -165,6 +170,9 @@ class ViewController: UIViewController, MPMediaPickerControllerDelegate, SimpleP
     override func viewDidLoad() {
         super.viewDidLoad()
         player.delegate = self
+        //playAndPauseBtn.setImage(playBtnImage!, forState: .Normal)
+        updateDummyArtworkImage()
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -204,7 +212,12 @@ class ViewController: UIViewController, MPMediaPickerControllerDelegate, SimpleP
     }
     
     func updatePlayBtnsTitle(text: String) {
-        playAndPauseBtn.setTitle(text, forState: UIControlState.Normal)
+        if text == "▷"{
+            playAndPauseBtn.setImage(playBtnImage, forState: UIControlState.Normal)
+        }else if text == "||"{
+            playAndPauseBtn.setImage(pauseBtnImage, forState: UIControlState.Normal)
+        }
+        //playAndPauseBtn.setTitle(text, forState: UIControlState.Normal)
     }
     
     func updateMusicLabel(text: String) {
