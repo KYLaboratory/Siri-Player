@@ -25,7 +25,7 @@ class SimplePlayer: NSObject, AVAudioPlayerDelegate {
     private var mediaItems = [MPMediaItem]()
     private var currentIndex: Int = 0
     private (set) var nowPlaying: Bool = false
-    
+    private let numOfHowToRead:u_int = 10
     var talker = AVSpeechSynthesizer()
     
     func pickItems(items: [MPMediaItem]) {
@@ -83,10 +83,12 @@ class SimplePlayer: NSObject, AVAudioPlayerDelegate {
                 // メッセージラベルに再生中アイテム情報を表示
                 delegate?.updateMusicLabel(item.title ?? "")
                 delegate?.updateArtistLabel(item.artist ?? "")
+                
                 //ジャケット表示
                 if(item.artwork != nil){
                     delegate?.updateArtworkImage(item.artwork!) //tsuiki1
-                } else {
+                }
+                else {
                     delegate?.updateDummyArtworkImage() //tsuiki1
                 }
                 
@@ -94,7 +96,32 @@ class SimplePlayer: NSObject, AVAudioPlayerDelegate {
                 if talker.speaking {
                     talker.stopSpeakingAtBoundary(AVSpeechBoundary.Immediate)
                 }
-                let readStr = "次の曲は、" + item.title! + "となります。よぉ　チェケラ！"
+                let rand_str = Int(arc4random_uniform(numOfHowToRead)) // 読み上げ文字列のランダム選択
+                var readStr = ""
+                switch rand_str {
+                    case 0:
+                        readStr = "次の曲は、" + item.title! + "となります。よぉ　チェケラ！"
+                    case 1:
+                        readStr = "次はペンネーム、しりとりいのちさんのリクエスト、" + item.title! + "です。どうぞ。"
+                    case 2:
+                        readStr = "月が綺麗ですね。" + item.title!
+                    case 3:
+                        readStr = "毎日お仕事お疲れ様。そんなあなたに届けたいこの曲、" + item.title!
+                    case 4:
+                        readStr = "続いての曲はあのときにいっせいを風靡したこの曲。" + item.title!
+                    case 5:
+                        readStr = "続いての曲は" + item.title! + "です。よいしょぉぉ"
+                    case 6:
+                        readStr = "お待たせしました。まんを持しての登場です。" + item.title!
+                    case 7:
+                        readStr = "街中での評判ナンバーワン！「この曲を聞くと泣けてきます。」というこの曲、" + item.title!
+                    case 8:
+                        readStr = "ふふふ、、、ついにこの曲が来てしまいましたか、、、" + item.title!
+                    case 9:
+                        readStr = "うーん、なんてクールでグルーヴィーな曲なんだ！" + item.title!
+                    default:
+                        readStr = "NO MUSIC"
+                }
                 let utterance = AVSpeechUtterance(string: readStr)
                 talker.speakUtterance(utterance)
             }
