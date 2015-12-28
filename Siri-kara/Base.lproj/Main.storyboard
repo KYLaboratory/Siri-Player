@@ -54,12 +54,26 @@
                                     <constraint firstAttribute="width" constant="140" id="5zo-M7-iq8"/>
                                     <constraint firstAttribute="height" constant="75" id="tM5-qF-A58"/>
                                 </constraints>
+                                <size key="titleShadowOffset" width="2.2250738585072014e-308" height="2.2250738585072014e-308"/>
                                 <state key="normal">
                                     <attributedString key="attributedTitle">
                                         <fragment>
                                             <string key="content">しりとり
 　始め！</string>
                                             <attributes>
+                                                <font key="NSFont" size="28" name="HiraKakuProN-W3"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
+                                <state key="highlighted">
+                                    <attributedString key="attributedTitle">
+                                        <fragment>
+                                            <string key="content">しりとり
+　始め！</string>
+                                            <attributes>
+                                                <color key="NSColor" red="0.47450980392156861" green="0.81176470588235294" blue="0.91764705882352937" alpha="1" colorSpace="calibratedRGB"/>
                                                 <font key="NSFont" size="28" name="HiraKakuProN-W3"/>
                                                 <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
                                             </attributes>
@@ -125,6 +139,19 @@
                                             <attributes>
                                                 <font key="NSFont" size="18" name="HiraKakuProN-W3"/>
                                                 <font key="NSOriginalFont" size="18" name="HiraKakuProN-W3"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="right" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
+                                <state key="highlighted">
+                                    <attributedString key="attributedTitle">
+                                        <fragment>
+                                            <string key="content">しりと
+リスト</string>
+                                            <attributes>
+                                                <color key="NSColor" red="0.47450980392156861" green="0.81176470588235294" blue="0.91764705882352937" alpha="1" colorSpace="calibratedRGB"/>
+                                                <font key="NSFont" size="18" name="HiraKakuProN-W3"/>
                                                 <paragraphStyle key="NSParagraphStyle" alignment="right" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
                                             </attributes>
                                         </fragment>
