@@ -15,6 +15,8 @@ import MediaPlayer
 class ListViewController: UITableViewController {
     
     var receive_param :[MPMediaItem] = []
+    let dummyTitle:String = "unknown Title"
+    let dummyArtist:String = "unknown Artist"
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,14 +33,23 @@ class ListViewController: UITableViewController {
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("ListCell", forIndexPath: indexPath)
-        cell.textLabel!.text = receive_param[indexPath.row].title!
-        cell.detailTextLabel!.text = receive_param[indexPath.row].artist!
+        
+        if receive_param[indexPath.row].title != nil{
+            cell.textLabel!.text = receive_param[indexPath.row].title!
+        }else{
+            cell.textLabel!.text = dummyTitle
+        }
+        
+        if receive_param[indexPath.row].artist != nil{
+            cell.detailTextLabel!.text = receive_param[indexPath.row].artist!
+        }else{
+            cell.detailTextLabel!.text = dummyArtist
+        }
+
         cell.imageView?.image = getArtworkImage(receive_param[indexPath.row])
         return cell
     }
     
-    
-    // "https://bitbucket.org/See_Ku/musicplayertips"
 
     func getArtworkImage(item: MPMediaItem) -> UIImage? {
         // 曲に設定されてるアートワークを取得
