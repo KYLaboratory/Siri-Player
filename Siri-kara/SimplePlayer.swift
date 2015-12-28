@@ -31,7 +31,7 @@ class SimplePlayer: NSObject, AVAudioPlayerDelegate {
     func pickItems(items: [MPMediaItem]) {
         // 選択した曲情報がmediaItemCollectionに入っている
         // mediaItemCollection.itemsから入っているMPMediaItemの配列を取得できる
-        //let items = mediaItemCollection.items
+        addRemoteControlEvent()
         if items.count == 0 {
             delegate?.updateMusicLabel("END")
             delegate?.updateArtistLabel("")
@@ -233,6 +233,67 @@ class SimplePlayer: NSObject, AVAudioPlayerDelegate {
         else {
             nextItem()// 次の曲へ。
         }
+    }
+    
+    func addRemoteControlEvent() {
+        let commandCenter = MPRemoteCommandCenter.sharedCommandCenter()
+        
+        //commandCenter.togglePlayPauseCommand.addTarget(self, action: "remoteTogglePlayPause:")
+        commandCenter.playCommand.addTarget(self, action: "remotePlay:")
+        commandCenter.pauseCommand.addTarget(self, action: "remotePause:")
+        commandCenter.nextTrackCommand.addTarget(self, action: "remoteNextTrack:")
+        commandCenter.previousTrackCommand.addTarget(self, action: "remotePrevTrack:")
+    }
+    
+    func remoteTogglePlayPause(event: MPRemoteCommandEvent) {
+        // イヤホンのセンターボタンを押した時の処理
+        // （再生中ならポーズ。停止中なら再生。といった処理を書く）
+        // （略）
+        //print("remoteTogglePlayPause")
+        
+    }
+    
+    func remotePlay(event: MPRemoteCommandEvent) {
+        //バックグラウンド再生するための設定
+        let audioSession: AVAudioSession = AVAudioSession.sharedInstance()
+        do{
+            try audioSession.setCategory(AVAudioSessionCategoryPlayback)
+        }
+        catch{
+            fatalError("カテゴリ設定失敗")
+        }
+        do{
+            try audioSession.setActive(true)
+        }
+        catch{
+            fatalError("session有効化失敗")
+        }
+        play()
+    }
+    
+    func remotePause(event: MPRemoteCommandEvent) {
+        let audioSession: AVAudioSession = AVAudioSession.sharedInstance()
+        do{
+            try audioSession.setCategory(AVAudioSessionCategoryPlayback)
+        }
+        catch{
+            fatalError("カテゴリ設定失敗")
+        }
+        do{
+            try audioSession.setActive(true)
+        }
+        catch{
+            fatalError("session有効化失敗")
+        }
+        pause()
+    }
+    
+    func remoteNextTrack(event: MPRemoteCommandEvent) {
+        nextItem()
+    }
+    
+    func remotePrevTrack(event: MPRemoteCommandEvent) {
+        prevItem()
     }
 }
 
