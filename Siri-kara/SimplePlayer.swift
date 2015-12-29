@@ -114,7 +114,7 @@ class SimplePlayer: NSObject, AVAudioPlayerDelegate {
                     case 6:
                         readStr = "お待たせしました。まんを持しての登場です。" + item.title!
                     case 7:
-                        readStr = "街中での評判ナンバーワン！「この曲を聞くと泣けてきます。」というこの曲、" + item.title!
+                        readStr = "まちぢゅうでの評判ナンバーワン！「この曲を聞くと泣けてきます。」というこの曲、" + item.title!
                     case 8:
                         readStr = "ふふふ、、、ついにこの曲が来てしまいましたか、、、" + item.title!
                     case 9:
@@ -264,8 +264,7 @@ class SimplePlayer: NSObject, AVAudioPlayerDelegate {
     
     func addRemoteControlEvent() {
         let commandCenter = MPRemoteCommandCenter.sharedCommandCenter()
-        
-        //commandCenter.togglePlayPauseCommand.addTarget(self, action: "remoteTogglePlayPause:")
+        commandCenter.togglePlayPauseCommand.addTarget(self, action: "remoteTogglePlayPause:")
         commandCenter.playCommand.addTarget(self, action: "remotePlay:")
         commandCenter.pauseCommand.addTarget(self, action: "remotePause:")
         commandCenter.nextTrackCommand.addTarget(self, action: "remoteNextTrack:")
@@ -273,46 +272,39 @@ class SimplePlayer: NSObject, AVAudioPlayerDelegate {
     }
     
     func remoteTogglePlayPause(event: MPRemoteCommandEvent) {
-        // イヤホンのセンターボタンを押した時の処理
-        // （再生中ならポーズ。停止中なら再生。といった処理を書く）
-        // （略）
-        //print("remoteTogglePlayPause")
-        
+        if (currentIndex < 0) && (currentIndex > mediaItems.count - 1){
+            return
+        }
+        if nowPlaying {
+            pause()
+        }
+        else {
+            play()
+        }
     }
     
     func remotePlay(event: MPRemoteCommandEvent) {
-        //バックグラウンド再生するための設定
-        let audioSession: AVAudioSession = AVAudioSession.sharedInstance()
-        do{
-            try audioSession.setCategory(AVAudioSessionCategoryPlayback)
+        if (currentIndex < 0) && (currentIndex > mediaItems.count - 1){
+            return
         }
-        catch{
-            fatalError("カテゴリ設定失敗")
+        if nowPlaying {
+            pause()
         }
-        do{
-            try audioSession.setActive(true)
+        else {
+            play()
         }
-        catch{
-            fatalError("session有効化失敗")
-        }
-        play()
     }
     
     func remotePause(event: MPRemoteCommandEvent) {
-        let audioSession: AVAudioSession = AVAudioSession.sharedInstance()
-        do{
-            try audioSession.setCategory(AVAudioSessionCategoryPlayback)
+        if (currentIndex < 0) && (currentIndex > mediaItems.count - 1){
+            return
         }
-        catch{
-            fatalError("カテゴリ設定失敗")
+        if nowPlaying {
+            pause()
         }
-        do{
-            try audioSession.setActive(true)
+        else {
+            play()
         }
-        catch{
-            fatalError("session有効化失敗")
-        }
-        pause()
     }
     
     func remoteNextTrack(event: MPRemoteCommandEvent) {
