@@ -16,8 +16,8 @@
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "35FEEAE71BC810110090EA67"
                BuildableName = "Siritori-Player.app"
-               BlueprintName = "Siritori-Player"
-               ReferencedContainer = "container:Siritori-Player.xcodeproj">
+               BlueprintName = "&#x30b7;&#x30ea;&#x30d5;&#x309a;&#x30ec;"
+               ReferencedContainer = "container:&#x30b7;&#x30ea;&#x30d5;&#x309a;&#x30ec;.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "35FEEAFB1BC810110090EA67"
-               BuildableName = "Siritori-Player.xctest"
-               BlueprintName = "Siritori-PlayerTests"
-               ReferencedContainer = "container:Siritori-Player.xcodeproj">
+               BuildableName = "&#x30b7;&#x30ea;&#x30d5;&#x309a;&#x30ec;.xctest"
+               BlueprintName = "&#x30b7;&#x30ea;&#x30d5;&#x309a;&#x30ec;Tests"
+               ReferencedContainer = "container:&#x30b7;&#x30ea;&#x30d5;&#x309a;&#x30ec;.xcodeproj">
             </BuildableReference>
          </TestableReference>
          <TestableReference
@@ -43,9 +43,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "35FEEB061BC810110090EA67"
-               BuildableName = "Siritori-Player.xctest"
-               BlueprintName = "Siritori-PlayerUITests"
-               ReferencedContainer = "container:Siritori-Player.xcodeproj">
+               BuildableName = "&#x30b7;&#x30ea;&#x30d5;&#x309a;&#x30ec;.xctest"
+               BlueprintName = "&#x30b7;&#x30ea;&#x30d5;&#x309a;&#x30ec;UITests"
+               ReferencedContainer = "container:&#x30b7;&#x30ea;&#x30d5;&#x309a;&#x30ec;.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -54,8 +54,8 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "35FEEAE71BC810110090EA67"
             BuildableName = "Siritori-Player.app"
-            BlueprintName = "Siritori-Player"
-            ReferencedContainer = "container:Siritori-Player.xcodeproj">
+            BlueprintName = "&#x30b7;&#x30ea;&#x30d5;&#x309a;&#x30ec;"
+            ReferencedContainer = "container:&#x30b7;&#x30ea;&#x30d5;&#x309a;&#x30ec;.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -77,8 +77,8 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "35FEEAE71BC810110090EA67"
             BuildableName = "Siritori-Player.app"
-            BlueprintName = "Siritori-Player"
-            ReferencedContainer = "container:Siritori-Player.xcodeproj">
+            BlueprintName = "&#x30b7;&#x30ea;&#x30d5;&#x309a;&#x30ec;"
+            ReferencedContainer = "container:&#x30b7;&#x30ea;&#x30d5;&#x309a;&#x30ec;.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -96,8 +96,8 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "35FEEAE71BC810110090EA67"
             BuildableName = "Siritori-Player.app"
-            BlueprintName = "Siritori-Player"
-            ReferencedContainer = "container:Siritori-Player.xcodeproj">
+            BlueprintName = "&#x30b7;&#x30ea;&#x30d5;&#x309a;&#x30ec;"
+            ReferencedContainer = "container:&#x30b7;&#x30ea;&#x30d5;&#x309a;&#x30ec;.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

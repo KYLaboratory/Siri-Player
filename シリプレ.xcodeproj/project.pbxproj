@@ -37,17 +37,17 @@
 
 /* Begin PBXFileReference section */
 		35CBAC181BC95627007E9184 /* SimplePlayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimplePlayer.swift; sourceTree = "<group>"; };
-		35FEEAE81BC810110090EA67 /* Siritori-Player.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Siritori-Player.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		35FEEAE81BC810110090EA67 /* シリプレ.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "シリプレ.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		35FEEAEB1BC810110090EA67 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		35FEEAED1BC810110090EA67 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		35FEEAF01BC810110090EA67 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		35FEEAF21BC810110090EA67 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		35FEEAF51BC810110090EA67 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		35FEEAF71BC810110090EA67 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		35FEEAFC1BC810110090EA67 /* Siritori-Player.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Siritori-Player.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		35FEEAFC1BC810110090EA67 /* シリプレ.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "シリプレ.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		35FEEB001BC810110090EA67 /* Siri_karaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Siri_karaTests.swift; sourceTree = "<group>"; };
 		35FEEB021BC810110090EA67 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		35FEEB071BC810110090EA67 /* Siritori-Player.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Siritori-Player.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		35FEEB071BC810110090EA67 /* シリプレ.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "シリプレ.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		35FEEB0B1BC810110090EA67 /* Siri_karaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Siri_karaUITests.swift; sourceTree = "<group>"; };
 		35FEEB0D1BC810110090EA67 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4F8AF5701BC8B655004B3004 /* ListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
@@ -91,9 +91,9 @@
 		35FEEAE91BC810110090EA67 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				35FEEAE81BC810110090EA67 /* Siritori-Player.app */,
-				35FEEAFC1BC810110090EA67 /* Siritori-Player.xctest */,
-				35FEEB071BC810110090EA67 /* Siritori-Player.xctest */,
+				35FEEAE81BC810110090EA67 /* シリプレ.app */,
+				35FEEAFC1BC810110090EA67 /* シリプレ.xctest */,
+				35FEEB071BC810110090EA67 /* シリプレ.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -134,9 +134,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		35FEEAE71BC810110090EA67 /* Siritori-Player */ = {
+		35FEEAE71BC810110090EA67 /* シリプレ */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 35FEEB101BC810110090EA67 /* Build configuration list for PBXNativeTarget "Siritori-Player" */;
+			buildConfigurationList = 35FEEB101BC810110090EA67 /* Build configuration list for PBXNativeTarget "シリプレ" */;
 			buildPhases = (
 				35FEEAE41BC810110090EA67 /* Sources */,
 				35FEEAE51BC810110090EA67 /* Frameworks */,
@@ -146,14 +146,14 @@
 			);
 			dependencies = (
 			);
-			name = "Siritori-Player";
+			name = "シリプレ";
 			productName = "Siri-kara";
-			productReference = 35FEEAE81BC810110090EA67 /* Siritori-Player.app */;
+			productReference = 35FEEAE81BC810110090EA67 /* シリプレ.app */;
 			productType = "com.apple.product-type.application";
 		};
-		35FEEAFB1BC810110090EA67 /* Siritori-PlayerTests */ = {
+		35FEEAFB1BC810110090EA67 /* シリプレTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 35FEEB131BC810110090EA67 /* Build configuration list for PBXNativeTarget "Siritori-PlayerTests" */;
+			buildConfigurationList = 35FEEB131BC810110090EA67 /* Build configuration list for PBXNativeTarget "シリプレTests" */;
 			buildPhases = (
 				35FEEAF81BC810110090EA67 /* Sources */,
 				35FEEAF91BC810110090EA67 /* Frameworks */,
@@ -164,14 +164,14 @@
 			dependencies = (
 				35FEEAFE1BC810110090EA67 /* PBXTargetDependency */,
 			);
-			name = "Siritori-PlayerTests";
+			name = "シリプレTests";
 			productName = "Siri-karaTests";
-			productReference = 35FEEAFC1BC810110090EA67 /* Siritori-Player.xctest */;
+			productReference = 35FEEAFC1BC810110090EA67 /* シリプレ.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		35FEEB061BC810110090EA67 /* Siritori-PlayerUITests */ = {
+		35FEEB061BC810110090EA67 /* シリプレUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 35FEEB161BC810110090EA67 /* Build configuration list for PBXNativeTarget "Siritori-PlayerUITests" */;
+			buildConfigurationList = 35FEEB161BC810110090EA67 /* Build configuration list for PBXNativeTarget "シリプレUITests" */;
 			buildPhases = (
 				35FEEB031BC810110090EA67 /* Sources */,
 				35FEEB041BC810110090EA67 /* Frameworks */,
@@ -182,9 +182,9 @@
 			dependencies = (
 				35FEEB091BC810110090EA67 /* PBXTargetDependency */,
 			);
-			name = "Siritori-PlayerUITests";
+			name = "シリプレUITests";
 			productName = "Siri-karaUITests";
-			productReference = 35FEEB071BC810110090EA67 /* Siritori-Player.xctest */;
+			productReference = 35FEEB071BC810110090EA67 /* シリプレ.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -214,7 +214,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 35FEEAE31BC810110090EA67 /* Build configuration list for PBXProject "Siritori-Player" */;
+			buildConfigurationList = 35FEEAE31BC810110090EA67 /* Build configuration list for PBXProject "シリプレ" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -227,9 +227,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				35FEEAE71BC810110090EA67 /* Siritori-Player */,
-				35FEEAFB1BC810110090EA67 /* Siritori-PlayerTests */,
-				35FEEB061BC810110090EA67 /* Siritori-PlayerUITests */,
+				35FEEAE71BC810110090EA67 /* シリプレ */,
+				35FEEAFB1BC810110090EA67 /* シリプレTests */,
+				35FEEB061BC810110090EA67 /* シリプレUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -294,12 +294,12 @@
 /* Begin PBXTargetDependency section */
 		35FEEAFE1BC810110090EA67 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 35FEEAE71BC810110090EA67 /* Siritori-Player */;
+			target = 35FEEAE71BC810110090EA67 /* シリプレ */;
 			targetProxy = 35FEEAFD1BC810110090EA67 /* PBXContainerItemProxy */;
 		};
 		35FEEB091BC810110090EA67 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 35FEEAE71BC810110090EA67 /* Siritori-Player */;
+			target = 35FEEAE71BC810110090EA67 /* シリプレ */;
 			targetProxy = 35FEEB081BC810110090EA67 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -416,7 +416,7 @@
 				INFOPLIST_FILE = "Siri-kara/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = group.jp.esper.SiritoriPlayer;
-				PRODUCT_NAME = "Siritori-Player";
+				PRODUCT_NAME = "シリプレ";
 				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -431,7 +431,7 @@
 				INFOPLIST_FILE = "Siri-kara/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = group.jp.esper.SiritoriPlayer;
-				PRODUCT_NAME = "Siritori-Player";
+				PRODUCT_NAME = "シリプレ";
 				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -444,8 +444,8 @@
 				INFOPLIST_FILE = "Siri-karaTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "esper.Siri-karaTests";
-				PRODUCT_NAME = "Siritori-Player";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Siritori-Player.app/Siritori-Player";
+				PRODUCT_NAME = "シリプレ";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/シリプレ.app/シリプレ";
 			};
 			name = Debug;
 		};
@@ -456,8 +456,8 @@
 				INFOPLIST_FILE = "Siri-karaTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "esper.Siri-karaTests";
-				PRODUCT_NAME = "Siritori-Player";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Siritori-Player.app/Siritori-Player";
+				PRODUCT_NAME = "シリプレ";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/シリプレ.app/シリプレ";
 			};
 			name = Release;
 		};
@@ -467,7 +467,7 @@
 				INFOPLIST_FILE = "Siri-karaUITests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "esper.Siri-karaUITests";
-				PRODUCT_NAME = "Siritori-Player";
+				PRODUCT_NAME = "シリプレ";
 				TEST_TARGET_NAME = "Siri-kara";
 				USES_XCTRUNNER = YES;
 			};
@@ -479,7 +479,7 @@
 				INFOPLIST_FILE = "Siri-karaUITests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "esper.Siri-karaUITests";
-				PRODUCT_NAME = "Siritori-Player";
+				PRODUCT_NAME = "シリプレ";
 				TEST_TARGET_NAME = "Siri-kara";
 				USES_XCTRUNNER = YES;
 			};
@@ -488,7 +488,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		35FEEAE31BC810110090EA67 /* Build configuration list for PBXProject "Siritori-Player" */ = {
+		35FEEAE31BC810110090EA67 /* Build configuration list for PBXProject "シリプレ" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				35FEEB0E1BC810110090EA67 /* Debug */,
@@ -497,7 +497,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		35FEEB101BC810110090EA67 /* Build configuration list for PBXNativeTarget "Siritori-Player" */ = {
+		35FEEB101BC810110090EA67 /* Build configuration list for PBXNativeTarget "シリプレ" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				35FEEB111BC810110090EA67 /* Debug */,
@@ -506,7 +506,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		35FEEB131BC810110090EA67 /* Build configuration list for PBXNativeTarget "Siritori-PlayerTests" */ = {
+		35FEEB131BC810110090EA67 /* Build configuration list for PBXNativeTarget "シリプレTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				35FEEB141BC810110090EA67 /* Debug */,
@@ -515,7 +515,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		35FEEB161BC810110090EA67 /* Build configuration list for PBXNativeTarget "Siritori-PlayerUITests" */ = {
+		35FEEB161BC810110090EA67 /* Build configuration list for PBXNativeTarget "シリプレUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				35FEEB171BC810110090EA67 /* Debug */,
