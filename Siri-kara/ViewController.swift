@@ -20,7 +20,6 @@ enum PLAYLIST_KIND : Int{
     case MAX
 }
 
-//class ViewController: UIViewController, MPMediaPickerControllerDelegate, SimplePlayerDelegate {
 class ViewController: UIViewController, SimplePlayerDelegate {
 
     var howToMakePlaylist = ["年代", "ジャンル", "曲名しりとり", "再生回数昇順","再生回数降順","とにかく作成"]
@@ -134,7 +133,6 @@ class ViewController: UIViewController, SimplePlayerDelegate {
         
         // しりとりできる文字を見つけるまで繰り返し
         while first_char == "" && text_temp.characters.count > 0 {
-            //            first_char_num++
             first_char = text_temp.substringToIndex(text_temp.startIndex.advancedBy(1))
             text_temp = text_temp.substringFromIndex(text_temp.startIndex.advancedBy(1))
             first_char = convertToSiritoriChar(first_char)
@@ -274,22 +272,18 @@ class ViewController: UIViewController, SimplePlayerDelegate {
     }
     
     func remotePlay(event: MPRemoteCommandEvent) {
-        print("Play")
         player.play()
     }
     
     func remotePause(event: MPRemoteCommandEvent) {
-        print("Pause")
         player.pause()
     }
     
     func remoteNextTrack(event: MPRemoteCommandEvent) {
-        print("Next")
         player.nextItem()
     }
     
     func remotePrevTrack(event: MPRemoteCommandEvent) {
-        print("Prev")
         player.prevItem()
     }
 }
