@@ -31,7 +31,6 @@ class SimplePlayer: NSObject, AVAudioPlayerDelegate {
     func pickItems(items: [MPMediaItem]) {
         // 選択した曲情報がmediaItemCollectionに入っている
         // mediaItemCollection.itemsから入っているMPMediaItemの配列を取得できる
-        addRemoteControlEvent()
         if items.count == 0 {
             delegate?.updateMusicLabel("END")
             delegate?.updateArtistLabel("")
@@ -262,57 +261,5 @@ class SimplePlayer: NSObject, AVAudioPlayerDelegate {
         }
     }
     
-    func addRemoteControlEvent() {
-        let commandCenter = MPRemoteCommandCenter.sharedCommandCenter()
-        commandCenter.togglePlayPauseCommand.addTarget(self, action: "remoteTogglePlayPause:")
-        commandCenter.playCommand.addTarget(self, action: "remotePlay:")
-        commandCenter.pauseCommand.addTarget(self, action: "remotePause:")
-        commandCenter.nextTrackCommand.addTarget(self, action: "remoteNextTrack:")
-        commandCenter.previousTrackCommand.addTarget(self, action: "remotePrevTrack:")
-    }
-    
-    func remoteTogglePlayPause(event: MPRemoteCommandEvent) {
-        if (currentIndex < 0) && (currentIndex > mediaItems.count - 1){
-            return
-        }
-        if nowPlaying {
-            pause()
-        }
-        else {
-            play()
-        }
-    }
-    
-    func remotePlay(event: MPRemoteCommandEvent) {
-        if (currentIndex < 0) && (currentIndex > mediaItems.count - 1){
-            return
-        }
-        if nowPlaying {
-            pause()
-        }
-        else {
-            play()
-        }
-    }
-    
-    func remotePause(event: MPRemoteCommandEvent) {
-        if (currentIndex < 0) && (currentIndex > mediaItems.count - 1){
-            return
-        }
-        if nowPlaying {
-            pause()
-        }
-        else {
-            play()
-        }
-    }
-    
-    func remoteNextTrack(event: MPRemoteCommandEvent) {
-        nextItem()
-    }
-    
-    func remotePrevTrack(event: MPRemoteCommandEvent) {
-        prevItem()
-    }
 }
 

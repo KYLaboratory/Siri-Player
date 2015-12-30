@@ -20,7 +20,8 @@ enum PLAYLIST_KIND : Int{
     case MAX
 }
 
-class ViewController: UIViewController, MPMediaPickerControllerDelegate, SimplePlayerDelegate,UIPickerViewDelegate {
+//class ViewController: UIViewController, MPMediaPickerControllerDelegate, SimplePlayerDelegate {
+class ViewController: UIViewController, SimplePlayerDelegate {
 
     var howToMakePlaylist = ["年代", "ジャンル", "曲名しりとり", "再生回数昇順","再生回数降順","とにかく作成"]
     
@@ -168,6 +169,7 @@ class ViewController: UIViewController, MPMediaPickerControllerDelegate, SimpleP
         super.viewDidLoad()
         player.delegate = self
         updateDummyArtworkImage()
+        addRemoteControlEvent()
         
     }
 
@@ -250,6 +252,45 @@ class ViewController: UIViewController, MPMediaPickerControllerDelegate, SimpleP
     override func viewWillDisappear(animated: Bool) {
         super.viewWillDisappear(animated)
         self.resignFirstResponder()
+    }
+    
+    func addRemoteControlEvent() {
+        print("addRemoteControlEvent")
+        let commandCenter = MPRemoteCommandCenter.sharedCommandCenter()
+        commandCenter.togglePlayPauseCommand.addTarget(self, action: "remoteTogglePlayPause:")
+        commandCenter.playCommand.addTarget(self, action: "remotePlay:")
+        commandCenter.pauseCommand.addTarget(self, action: "remotePause:")
+        commandCenter.nextTrackCommand.addTarget(self, action: "remoteNextTrack:")
+        commandCenter.previousTrackCommand.addTarget(self, action: "remotePrevTrack:")
+    }
+    
+    func remoteTogglePlayPause(event: MPRemoteCommandEvent) {
+        if player.nowPlaying {
+            player.pause()
+        }
+        else {
+            player.play()
+        }
+    }
+    
+    func remotePlay(event: MPRemoteCommandEvent) {
+        print("Play")
+        player.play()
+    }
+    
+    func remotePause(event: MPRemoteCommandEvent) {
+        print("Pause")
+        player.pause()
+    }
+    
+    func remoteNextTrack(event: MPRemoteCommandEvent) {
+        print("Next")
+        player.nextItem()
+    }
+    
+    func remotePrevTrack(event: MPRemoteCommandEvent) {
+        print("Prev")
+        player.prevItem()
     }
 }
 
