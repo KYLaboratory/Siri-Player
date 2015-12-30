@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:Siri-kara.xcodeproj">
+      location = "self:/Users/Yohei_Katoh/Siritori-Player/Siritori-Player.xcodeproj">
    </FileRef>
 </Workspace>

@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "35FEEAE71BC810110090EA67"
-               BuildableName = "Siri-kara.app"
-               BlueprintName = "Siri-kara"
-               ReferencedContainer = "container:Siri-kara.xcodeproj">
+               BuildableName = "Siritori-Player.app"
+               BlueprintName = "Siritori-Player"
+               ReferencedContainer = "container:Siritori-Player.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "35FEEAFB1BC810110090EA67"
-               BuildableName = "Siri-karaTests.xctest"
-               BlueprintName = "Siri-karaTests"
-               ReferencedContainer = "container:Siri-kara.xcodeproj">
+               BuildableName = "Siritori-Player.xctest"
+               BlueprintName = "Siritori-PlayerTests"
+               ReferencedContainer = "container:Siritori-Player.xcodeproj">
             </BuildableReference>
          </TestableReference>
          <TestableReference
@@ -43,9 +43,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "35FEEB061BC810110090EA67"
-               BuildableName = "Siri-karaUITests.xctest"
-               BlueprintName = "Siri-karaUITests"
-               ReferencedContainer = "container:Siri-kara.xcodeproj">
+               BuildableName = "Siritori-Player.xctest"
+               BlueprintName = "Siritori-PlayerUITests"
+               ReferencedContainer = "container:Siritori-Player.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -53,9 +53,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "35FEEAE71BC810110090EA67"
-            BuildableName = "Siri-kara.app"
-            BlueprintName = "Siri-kara"
-            ReferencedContainer = "container:Siri-kara.xcodeproj">
+            BuildableName = "Siritori-Player.app"
+            BlueprintName = "Siritori-Player"
+            ReferencedContainer = "container:Siritori-Player.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -76,9 +76,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "35FEEAE71BC810110090EA67"
-            BuildableName = "Siri-kara.app"
-            BlueprintName = "Siri-kara"
-            ReferencedContainer = "container:Siri-kara.xcodeproj">
+            BuildableName = "Siritori-Player.app"
+            BlueprintName = "Siritori-Player"
+            ReferencedContainer = "container:Siritori-Player.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -95,9 +95,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "35FEEAE71BC810110090EA67"
-            BuildableName = "Siri-kara.app"
-            BlueprintName = "Siri-kara"
-            ReferencedContainer = "container:Siri-kara.xcodeproj">
+            BuildableName = "Siritori-Player.app"
+            BlueprintName = "Siritori-Player"
+            ReferencedContainer = "container:Siritori-Player.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
