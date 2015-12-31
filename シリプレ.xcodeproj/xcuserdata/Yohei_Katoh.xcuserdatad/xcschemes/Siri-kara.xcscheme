@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "35FEEAE71BC810110090EA67"
-               BuildableName = "Siritori-Player.app"
+               BuildableName = "&#x30b7;&#x30ea;&#x30d5;&#x309a;&#x30ec;.app"
                BlueprintName = "&#x30b7;&#x30ea;&#x30d5;&#x309a;&#x30ec;"
                ReferencedContainer = "container:&#x30b7;&#x30ea;&#x30d5;&#x309a;&#x30ec;.xcodeproj">
             </BuildableReference>
@@ -53,7 +53,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "35FEEAE71BC810110090EA67"
-            BuildableName = "Siritori-Player.app"
+            BuildableName = "&#x30b7;&#x30ea;&#x30d5;&#x309a;&#x30ec;.app"
             BlueprintName = "&#x30b7;&#x30ea;&#x30d5;&#x309a;&#x30ec;"
             ReferencedContainer = "container:&#x30b7;&#x30ea;&#x30d5;&#x309a;&#x30ec;.xcodeproj">
          </BuildableReference>
@@ -76,7 +76,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "35FEEAE71BC810110090EA67"
-            BuildableName = "Siritori-Player.app"
+            BuildableName = "&#x30b7;&#x30ea;&#x30d5;&#x309a;&#x30ec;.app"
             BlueprintName = "&#x30b7;&#x30ea;&#x30d5;&#x309a;&#x30ec;"
             ReferencedContainer = "container:&#x30b7;&#x30ea;&#x30d5;&#x309a;&#x30ec;.xcodeproj">
          </BuildableReference>
@@ -95,7 +95,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "35FEEAE71BC810110090EA67"
-            BuildableName = "Siritori-Player.app"
+            BuildableName = "&#x30b7;&#x30ea;&#x30d5;&#x309a;&#x30ec;.app"
             BlueprintName = "&#x30b7;&#x30ea;&#x30d5;&#x309a;&#x30ec;"
             ReferencedContainer = "container:&#x30b7;&#x30ea;&#x30d5;&#x309a;&#x30ec;.xcodeproj">
          </BuildableReference>

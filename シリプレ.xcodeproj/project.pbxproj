@@ -415,7 +415,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "Siri-kara/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = group.jp.esper.SiritoriPlayer;
+				PRODUCT_BUNDLE_IDENTIFIER = group.jp.esper.ShiritoriPlayer;
 				PRODUCT_NAME = "シリプレ";
 				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 1;
@@ -430,7 +430,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "Siri-kara/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = group.jp.esper.SiritoriPlayer;
+				PRODUCT_BUNDLE_IDENTIFIER = group.jp.esper.ShiritoriPlayer;
 				PRODUCT_NAME = "シリプレ";
 				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 1;
