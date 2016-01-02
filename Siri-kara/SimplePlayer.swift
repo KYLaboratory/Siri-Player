@@ -95,32 +95,8 @@ class SimplePlayer: NSObject, AVAudioPlayerDelegate {
                 if talker.speaking {
                     talker.stopSpeakingAtBoundary(AVSpeechBoundary.Immediate)
                 }
-                let rand_str = Int(arc4random_uniform(numOfHowToRead)) // 読み上げ文字列のランダム選択
-                var readStr = ""
-                switch rand_str {
-                    case 0:
-                        readStr = "次の曲は、" + item.title! + "となります。よぉ　チェケラ！"
-                    case 1:
-                        readStr = "次はペンネーム、しりとりいのちさんのリクエスト、" + item.title! + "です。どうぞ。"
-                    case 2:
-                        readStr = "月が綺麗ですね。" + item.title!
-                    case 3:
-                        readStr = "毎日お仕事お疲れ様。そんなあなたに届けたいこの曲、" + item.title!
-                    case 4:
-                        readStr = "続いての曲はあのときにいっせいを風靡したこの曲。" + item.title!
-                    case 5:
-                        readStr = "続いての曲は" + item.title! + "です。よいしょぉぉ"
-                    case 6:
-                        readStr = "お待たせしました。まんを持しての登場です。" + item.title!
-                    case 7:
-                        readStr = "まちぢゅうでの評判ナンバーワン！「この曲を聞くと泣けてきます。」というこの曲、" + item.title!
-                    case 8:
-                        readStr = "ふふふ、、、ついにこの曲が来てしまいましたか、、、" + item.title!
-                    case 9:
-                        readStr = "うーん、なんてクールでグルーヴィーな曲なんだ！" + item.title!
-                    default:
-                        readStr = "NO MUSIC"
-                }
+                
+                let readStr = getRandomString(track_number)
                 let utterance = AVSpeechUtterance(string: readStr)
                 talker.speakUtterance(utterance)
             }
@@ -143,6 +119,39 @@ class SimplePlayer: NSObject, AVAudioPlayerDelegate {
             return false
         }
         return true
+    }
+    
+    func getRandomString(track_number:Int)->String {
+        let item = mediaItems[track_number]//本当はここで処理せず、itemを引数で受け取りたいが
+        
+        //恒久的にはテーブル化すべき
+        let rand_str = Int(arc4random_uniform(numOfHowToRead)) // 読み上げ文字列のランダム選択
+        var readStr = ""
+        switch rand_str {
+            case 0:
+                readStr = "次の曲は、" + item.title! + "となります。よぉ　チェケラ！"
+            case 1:
+                readStr = "次はペンネーム、しりとりいのちさんのリクエスト、" + item.title! + "です。どうぞ。"
+            case 2:
+                readStr = "月が綺麗ですね。" + item.title!
+            case 3:
+                readStr = "毎日お仕事お疲れ様。そんなあなたに届けたいこの曲、" + item.title!
+            case 4:
+                readStr = "続いての曲はあのときにいっせいを風靡したこの曲。" + item.title!
+            case 5:
+                readStr = "続いての曲は" + item.title! + "です。よいしょぉぉ"
+            case 6:
+                readStr = "お待たせしました。まんを持しての登場です。" + item.title!
+            case 7:
+                readStr = "まちぢゅうでの評判ナンバーワン！「この曲を聞くと泣けてきます。」というこの曲、" + item.title!
+            case 8:
+                readStr = "ふふふ、、、ついにこの曲が来てしまいましたか、、、" + item.title!
+            case 9:
+                readStr = "うーん、なんてクールでグルーヴィーな曲なんだ！" + item.title!
+            default:
+                readStr = "NO MUSIC"
+        }
+        return readStr
     }
     
     func actError(){
