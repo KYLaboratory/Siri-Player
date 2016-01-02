@@ -54,14 +54,13 @@ class ViewController: UIViewController, SimplePlayerDelegate {
     func makeSiritoriList(){
         playlist.removeAll()
         var listId: Array<UInt64> = []
-        //        listId.removeAll()
         let songQuery = MPMediaQuery.songsQuery()
         if let all_song = songQuery.items as [MPMediaItem]! {
             let select_first = Int(arc4random_uniform(UInt32(all_song.count)))// 最初の曲を選択
             playlist.append(all_song[select_first])
             var pass_char = lastChar(all_song[select_first].title!)
             listId.append(all_song[select_first].persistentID)
-            //            var pass_char = "る" // テスト用
+            //var pass_char = "る" // テスト用
             
             let playlist_count_max = 100//プレイリストの曲数の上限
             while pass_char != "NO MUSIC" && playlist.count <= playlist_count_max {

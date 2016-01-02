@@ -61,15 +61,15 @@ class SimplePlayer: NSObject, AVAudioPlayerDelegate {
             fatalError("session有効化失敗")
         }
         
-        if updatePlayer(){
+        if updatePlayer(currentIndex){
             play()
         }
     }
     
 
     // プレイヤーにitemをセットして更新
-    func updatePlayer()->Bool {
-        let item = mediaItems[currentIndex]// MPMediaItemのassetURLからプレイヤーを作成する
+    func updatePlayer(track_number :Int)->Bool {
+        let item = mediaItems[track_number]// MPMediaItemのassetURLからプレイヤーを作成する
         
         if let url: NSURL = item.assetURL {
             do {
@@ -149,6 +149,14 @@ class SimplePlayer: NSObject, AVAudioPlayerDelegate {
         nextItem()
     }
     
+    func play(track_number: Int) {
+        if 0 <= track_number && track_number < mediaItems.count {
+            if updatePlayer(track_number){
+                play()
+            }
+        }
+    }
+    
     func play() {
         if let player = audioPlayer {
             player.play()
@@ -218,7 +226,7 @@ class SimplePlayer: NSObject, AVAudioPlayerDelegate {
     
     private func actPlayItem(){
         if nowPlaying{
-            if updatePlayer(){
+            if updatePlayer(currentIndex){
                 play()
             }
             else{
@@ -226,7 +234,7 @@ class SimplePlayer: NSObject, AVAudioPlayerDelegate {
             }
         }
         else{
-            if updatePlayer(){
+            if updatePlayer(currentIndex){
                 pause()
             }
             else{
