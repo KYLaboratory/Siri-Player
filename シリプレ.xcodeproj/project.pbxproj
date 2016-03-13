@@ -15,6 +15,7 @@
 		35FEEAF61BC810110090EA67 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35FEEAF41BC810110090EA67 /* LaunchScreen.storyboard */; };
 		35FEEB011BC810110090EA67 /* Siri_karaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35FEEB001BC810110090EA67 /* Siri_karaTests.swift */; };
 		35FEEB0C1BC810110090EA67 /* Siri_karaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35FEEB0B1BC810110090EA67 /* Siri_karaUITests.swift */; };
+		4F0036351C952B7C00E07205 /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F0036331C952B7C00E07205 /* Main_iPad.storyboard */; };
 		4F8AF5711BC8B655004B3004 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F8AF5701BC8B655004B3004 /* ListViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -50,6 +51,7 @@
 		35FEEB071BC810110090EA67 /* シリプレ.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "シリプレ.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		35FEEB0B1BC810110090EA67 /* Siri_karaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Siri_karaUITests.swift; sourceTree = "<group>"; };
 		35FEEB0D1BC810110090EA67 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4F0036341C952B7C00E07205 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
 		4F8AF5701BC8B655004B3004 /* ListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -104,6 +106,7 @@
 				35FEEAEB1BC810110090EA67 /* AppDelegate.swift */,
 				35FEEAED1BC810110090EA67 /* ViewController.swift */,
 				35FEEAEF1BC810110090EA67 /* Main.storyboard */,
+				4F0036331C952B7C00E07205 /* Main_iPad.storyboard */,
 				4F8AF5701BC8B655004B3004 /* ListViewController.swift */,
 				35CBAC181BC95627007E9184 /* SimplePlayer.swift */,
 				35FEEAF21BC810110090EA67 /* Assets.xcassets */,
@@ -240,6 +243,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				35FEEAF61BC810110090EA67 /* LaunchScreen.storyboard in Resources */,
+				4F0036351C952B7C00E07205 /* Main_iPad.storyboard in Resources */,
 				35FEEAF31BC810110090EA67 /* Assets.xcassets in Resources */,
 				35FEEAF11BC810110090EA67 /* Main.storyboard in Resources */,
 			);
@@ -319,6 +323,14 @@
 				35FEEAF51BC810110090EA67 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		4F0036331C952B7C00E07205 /* Main_iPad.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4F0036341C952B7C00E07205 /* Base */,
+			);
+			name = Main_iPad.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
