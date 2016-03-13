@@ -82,7 +82,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nJF-A5-Aht">
-                                <rect key="frame" x="278" y="397" width="79" height="102"/>
+                                <rect key="frame" x="278" y="399" width="79" height="102"/>
                                 <color key="backgroundColor" red="0.88979640151515149" green="0.87324735082841931" blue="0.55705861023279624" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal">
                                     <attributedString key="attributedTitle">
@@ -121,7 +121,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TvZ-UM-bAx">
-                                <rect key="frame" x="118" y="397" width="140" height="102"/>
+                                <rect key="frame" x="118" y="399" width="140" height="102"/>
                                 <color key="backgroundColor" red="0.82842454462035908" green="0.99691167186767682" blue="0.50244643798014699" alpha="1" colorSpace="calibratedRGB"/>
                                 <size key="titleShadowOffset" width="2.2250738585072014e-308" height="2.2250738585072014e-308"/>
                                 <state key="normal">
@@ -164,13 +164,13 @@
                         <color key="tintColor" red="0.073863636363636354" green="0.073863636363636354" blue="0.073863636363636354" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="v9s-jj-esF" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="0mn-Zm-oBS"/>
-                            <constraint firstItem="ZMR-Id-aTg" firstAttribute="top" secondItem="nJF-A5-Aht" secondAttribute="bottom" constant="25" id="0vI-Mw-Eb3"/>
+                            <constraint firstItem="ZMR-Id-aTg" firstAttribute="top" secondItem="nJF-A5-Aht" secondAttribute="bottom" constant="23" id="0vI-Mw-Eb3"/>
                             <constraint firstItem="v9s-jj-esF" firstAttribute="top" secondItem="V9b-pr-1Kl" secondAttribute="bottom" constant="7" id="1hO-X6-n5z"/>
                             <constraint firstItem="nJF-A5-Aht" firstAttribute="leading" secondItem="TvZ-UM-bAx" secondAttribute="trailing" constant="20" id="26s-wf-1Z9"/>
                             <constraint firstItem="aSH-6Y-jdC" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" multiplier="0.6" id="4oL-kz-afe"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Vav-Li-ZiB" secondAttribute="bottom" constant="44" id="6r5-z7-1Op"/>
                             <constraint firstItem="aSH-6Y-jdC" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.3" id="8iZ-W0-uat"/>
-                            <constraint firstItem="Vav-Li-ZiB" firstAttribute="top" secondItem="TvZ-UM-bAx" secondAttribute="bottom" constant="25" id="BzW-Zk-N73"/>
+                            <constraint firstItem="Vav-Li-ZiB" firstAttribute="top" secondItem="TvZ-UM-bAx" secondAttribute="bottom" constant="23" id="BzW-Zk-N73"/>
                             <constraint firstItem="ZMR-Id-aTg" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="100" id="EXc-nE-cFc"/>
                             <constraint firstItem="v9s-jj-esF" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.8" constant="20" id="FJ4-6b-OJ2"/>
                             <constraint firstItem="aSH-6Y-jdC" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Gk7-Nm-Is6"/>
